@@ -173,6 +173,36 @@ namespace Minomina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DesvinculacionAfuera {
+            get {
+                object obj = ResourceManager.GetObject("DesvinculacionAfuera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DesvinculacionAfuera1 {
+            get {
+                object obj = ResourceManager.GetObject("DesvinculacionAfuera1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DesvinculacionDentro {
+            get {
+                object obj = ResourceManager.GetObject("DesvinculacionDentro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondosPresentacion {
             get {
                 object obj = ResourceManager.GetObject("FondosPresentacion", resourceCulture);
@@ -926,26 +956,6 @@ namespace Minomina.Properties {
         internal static System.Drawing.Bitmap Ojover {
             get {
                 object obj = ResourceManager.GetObject("Ojover", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PlantillaMainScreen {
-            get {
-                object obj = ResourceManager.GetObject("PlantillaMainScreen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Presenacion_1 {
-            get {
-                object obj = ResourceManager.GetObject("Presenacion 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

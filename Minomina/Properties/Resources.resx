@@ -118,68 +118,203 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BotonSingin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonSingin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconoAgregarColaboradorColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoAgregarColaboradorColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Buton vacio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Buton vacio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Caja01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Caja01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconoCreapuestoRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCreapuestoRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Caja02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Caja02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cierre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cierre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ColaboradoresBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ColaboradoresBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ColaboradoresColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ColaboradoresColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CrearMaterial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CrearMaterial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuCovercioDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuCovercioDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CrearMaterialBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CrearMaterialBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cuadro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cuadro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuUsuarioDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuUsuarioDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoIventarioblanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoIventarioblanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoAgregarUOMBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoAgregarUOMBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoGestionHumana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoGestionHumana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FondosPresentacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondosPresentacion.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FondosPresentacion02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondosPresentacion02.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondosPresentacion03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondosPresentacion03.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HeaderColaborador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeaderColaborador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HeaderMateriaPrima" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeaderMateriaPrima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HeaderNovedad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeaderNovedad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HeaderPreparacionCalidad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeaderPreparacionCalidad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="HeaderProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeaderProductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuColaboradorNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuColaboradorNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoNomina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoNomina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoGestionHumanaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoGestionHumanaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeaderUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeaderUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoCreaNoveAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCreaNoveAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HeaderPuesto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeaderPuesto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeaderUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeaderUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconoNominaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoNominaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenunovedadesDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenunovedadesDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuMateriaDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuMateriaDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuProductoNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuProductoNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cuadro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cuadro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoCrearMaterialBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCrearMaterialBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ojonoven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ojonoven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoCrearMaterial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCrearMaterial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuMateriaDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuMateriaDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuMareriaNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuMareriaNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuPreparacionCalidadDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuPreparacionCalidadDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenupreparacionCalidadDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenupreparacionCalidadDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo QMproduc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo QMproduc.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesvinculacionAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesvinculacionAfuera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoManufacColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoManufacColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuColaboradorDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuColaboradorDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoagregarColaboradorClaro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoagregarColaboradorClaro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RestoreDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RestoreDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoCrearmedidaDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCrearmedidaDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuColaboradorDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuColaboradorDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrearMaterial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrearMaterial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoredondeLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoredondeLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeaderPreparacionCalidad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeaderPreparacionCalidad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoManufacBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoManufacBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoAgregarUOMColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoAgregarUOMColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColaboradoresBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColaboradoresBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoPequeno llave color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoPequeno llave color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuUsuarioNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuUsuarioNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoPequeno llave blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoPequeno llave blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuNovedadesAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuNovedadesAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Caja01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Caja01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeaderColaborador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeaderColaborador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo03.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuNovedadesNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuNovedadesNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoPequeno Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoPequeno Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoIventarioColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoIventarioColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuproductoDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuproductoDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo QMproduc - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo QMproduc - Copy.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondosPresentacion02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondosPresentacion02.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoAgregaProductoColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoAgregaProductoColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColaboradoresColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColaboradoresColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Buton vacio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Buton vacio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuproductoDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuproductoDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoPequeno blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoPequeno blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoCrearMedidaAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoCrearMedidaAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoAdminBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoAdminBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,205 +322,73 @@
   <data name="iconoAdminColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoAdminColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconoAgregaProductoBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoAgregaProductoBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoAgregaProductoColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoAgregaProductoColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoagregarColaboradorClaro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoagregarColaboradorClaro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoAgregarColaboradorColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoAgregarColaboradorColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoAgregarUOMBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoAgregarUOMBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoAgregarUOMColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoAgregarUOMColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCreaNoveAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCreaNoveAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconocreanoveDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconocreanoveDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCreapuestoColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCreapuestoColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCreapuestoRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCreapuestoRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCreapuestoRojoOscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCreapuestoRojoOscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCrearMaterial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCrearMaterial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCrearMaterialBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCrearMaterialBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoCrearMedidaAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconoCrearMedidaAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoCrearmedidaDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoCrearmedidaDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoGestionHumana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoGestionHumana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoGestionHumanaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoGestionHumanaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoIventarioblanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoIventarioblanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoIventarioColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoIventarioColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoManufacBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoManufacBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoManufacColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoManufacColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoNomina" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoNomina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoNominaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoNominaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ligcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ligcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo QMproduc - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo QMproduc - Copy.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo QMproduc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo QMproduc.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo02.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo03.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoPequeno blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoPequeno blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoPequeno Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoPequeno Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoPequeno llave blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoPequeno llave blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoPequeno llave color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoPequeno llave color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoredondeLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoredondeLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuColaboradorDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuColaboradorDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuColaboradorDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuColaboradorDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuColaboradorNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuColaboradorNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HeaderNovedad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeaderNovedad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuCovercioDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuCovercioDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuCovercioDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuCovercioDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenucovercioNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenucovercioNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuDesvinculacionNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuDesvinculacionNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuMareriaNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuMareriaNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuMateriaDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuMateriaDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuMateriaDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuMateriaDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuNovedadesAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuNovedadesAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenunovedadesDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenunovedadesDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuNovedadesNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuNovedadesNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenupreparacionCalidadDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenupreparacionCalidadDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuPreparacionCalidadDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuPreparacionCalidadDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuPreparacionCalidadNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuPreparacionCalidadNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuproductoDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuproductoDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuproductoDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuproductoDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuProductoNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuProductoNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MenuPuestoDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuPuestoDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuPuestoDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuPuestoDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuPuestoNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuPuestoNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuUsuarioDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuUsuarioDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuUsuarioDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuUsuarioDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HeaderMateriaPrima" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeaderMateriaPrima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuUsuarioNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuUsuarioNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconoAgregaProductoBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoAgregaProductoBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuDesvinculacionNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuDesvinculacionNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cierre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cierre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ojonoven" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ojonoven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo02.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoCreapuestoRojoOscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCreapuestoRojoOscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuPuestoNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuPuestoNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonSingin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonSingin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenucovercioNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenucovercioNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ligcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ligcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ojover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ojover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PlantillaMainScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlantillaMainScreen.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FondosPresentacion03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondosPresentacion03.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Presenacion 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Presenacion 1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuPreparacionCalidadNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuPreparacionCalidadNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RestoreDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RestoreDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Caja02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Caja02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoCreapuestoColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoCreapuestoColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuPuestoDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuPuestoDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconocreanoveDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconocreanoveDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesvinculacionDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesvinculacionDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesvinculacionAfuera1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesvinculacionAfuera2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
