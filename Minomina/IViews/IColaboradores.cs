@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Minomina.Views
 {
@@ -22,8 +23,6 @@ namespace Minomina.Views
         string CUENTABANCO { get; set; }
         string TIPOCUENTA { get; set; }
         string BANCO { get; set; }
-        string IDDEPARTAMENTO { get; set; }
-        string ROL { get; set; }
         bool USUARIO { get; set; }
     }
 }

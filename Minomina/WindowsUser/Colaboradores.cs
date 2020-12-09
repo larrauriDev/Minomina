@@ -9,14 +9,34 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Minomina.Helpers;
+using Minomina.Views;
+using Minomina.Presentation;
+
 
 namespace Minomina.WindowsUser
 {
-    public partial class Colaboradores : Form
+    public partial class Colaboradores : Form, IColaboradores
     {
+        string IColaboradores.IDPUESTOTRABAJO { get => cbPuesto.SelectedValue.ToString(); set =>  cbPuesto.SelectedValue = value; }
+        string IColaboradores.CODIGOEMPLEADO { get => tbID.Text; set => tbID.Text = value; }
+        string IColaboradores.FECHAINGRESO { get => dtpFechaIngreso.Text; set => dtpFechaIngreso.Text = value; }
+        string IColaboradores.ESTADOLABORAR { get => cbEstado.Text; set => cbEstado.Text = value; }
+        string IColaboradores.NOMBRE { get => tbNombre.Text; set => tbNombre.Text = value; }
+        string IColaboradores.CEDULA { get => tbCedula.Text; set => tbCedula.Text = value; }
+        string IColaboradores.APELLIDO { get => tbApellido.Text; set => tbApellido.Text = value; }
+        string IColaboradores.SEXO { get => cbSexo.Text; set => cbSexo.Text = value; }
+        string IColaboradores.DIRECCION { get => tbDireccion.Text; set => tbDireccion.Text = value; }
+        string IColaboradores.MAIL { get => tbMail.Text; set => tbMail.Text = value; }
+        string IColaboradores.TELEFONO { get => tbTele.Text; set => tbTele.Text = value; }
+        string IColaboradores.CUENTABANCO { get => tbCuentabancaria.Text; set => tbCuentabancaria.Text = value; }
+        string IColaboradores.TIPOCUENTA { get => cbTipoCuenta.Text; set => cbTipoCuenta.Text = value; }
+        string IColaboradores.BANCO { get => tbBanco.Text; set => tbBanco.Text = value; }
+        bool IColaboradores.USUARIO { get => ckUsuario.Checked; set => ckUsuario.Checked = value; }
+        
         public Colaboradores()
         {
             InitializeComponent();
+            
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -85,30 +105,33 @@ namespace Minomina.WindowsUser
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form t = this;
-           // PCOLABORADOR cola = new PCOLABORADOR(this);
-            if (HelperForms.CheckEmpy(t))
+           // Form t = this;
+           
+            PColaborador cola = new PColaborador(this);
+            cola.InsertaColaborador(Colaboradores.ActiveForm);
+           /* if (HelperForms.CheckEmpy(t))
                 return;
             if (tbID.Text == "" && tbID.Enabled == false)
             {
-                cola.InsertaColaborador(Colaboradores.ActiveForm);
+                //cola.InsertaColaborador(Colaboradores.ActiveForm);
                 lbAviso.Visible = false;
                 lbcreado.Visible = true;
                 time.Enabled = true;
                 time.Start();
-
+                
                 /* if (time.GetLifetimeService().Equals(3000))
                  {
                      time.Stop();
-                 }*/
+                 }
             }
             else if (tbID.Text != "")
             {
-                cola.UpdateColaborador();
+                //cola.UpdateColaborador();
             }
-            cola.CompletaDatagrid(dataGridColaboradores);
+            //cola.CompletaDatagrid(dataGridColaboradores);
             if (tbID.Enabled == false)
-                tbID.Enabled = true;
+                tbID.Enabled = true;*/
         }
+
     }
 }
