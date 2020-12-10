@@ -98,8 +98,13 @@ namespace Minomina.Models
         {
             using (MINOMINAEntities db = new MINOMINAEntities())
             {
-                var tbPuesto = from p in db.DataGridPuestoes
-                               select new { p.ID_Puesto, p.Puesto, p.Departamento, p.Cantidad_Disponible, p.Pago_por_horas, p.Salario, p.Deberes, p.Frecuencia_del_salario };
+                //var tbPuesto = from p in db.DataGridPuestoes
+                //             select new { p.ID_Puesto, p.Puesto, p.Departamento, p.Cantidad_Disponible, p.Pago_por_horas, p.Salario, p.Deberes, p.Frecuencia_del_salario };
+
+                var tbPuesto = from p in db.Puestos
+                               join a in db.Departamentos on p.RECIDDEPAR equals a.RECID
+                               select new { p.ID_Puesto, p.Puesto1, a.Departamento1, p.Cantidad_Disponible,p.Pago_por_horas,p.Salario, p.Deberes, p.Frecuencia_del_salario,p.RECID};
+
                 dtg.DataSource = tbPuesto.ToList();
                 dtg.Columns[0].HeaderText = "Codigo Puesto";
                 dtg.Columns[1].HeaderText = "Puesto";
@@ -115,6 +120,68 @@ namespace Minomina.Models
             }
 
         }
+        public ComboBox FillComboDepartamento(ComboBox cbDepa)
+        {
+            using (MINOMINAEntities db = new MINOMINAEntities())
+            {
+                //var cb = from p in db.Departamentos select new {p.RECID, p.Codigo_de_Departamento, p.Departamento1 };
+                
+                cbDepa.DisplayMember = "Departamento1";
+                cbDepa.ValueMember = "RECID";
+                cbDepa.SelectedValue = "Departamento1";
+                cbDepa.DataSource = db.Departamentos.ToList();
+                cbDepa.SelectedIndex = -1;
 
+            }
+
+            return cbDepa;
+        }
+
+        public int ExisteID() {
+            int filas;
+            using (MINOMINAEntities db = new MINOMINAEntities())
+            {
+                var encontrado = from p in db.Puestos where p.ID_Puesto == idPuesto select p;
+                filas = encontrado.Count();
+
+            }
+            return filas;
+        
+        }
+
+        public void BuscarPuesto(DataGridView dtg)
+        {
+            using (MINOMINAEntities db = new MINOMINAEntities())
+            {
+                
+                if (idPuesto == "")
+                {
+                    idPuesto = "PUES";
+                }
+              
+                  var tbPuesto = (from p in db.DataGridPuestoes
+                                select new { p.ID_Puesto, p.Puesto, p.Departamento, p.Cantidad_Disponible, p.Pago_por_horas, p.Salario, p.Deberes, p.Frecuencia_del_salario }).Where(x => x.ID_Puesto.Contains(idPuesto)).ToList();
+                
+                /* ipuesto.NOMBRE = tbPuesto.Puesto.ToString();
+                 ipuesto.PAGOSHORAS = tbPuesto.Pago_por_horas.ToString();
+                 ipuesto.SALARIO = tbPuesto.Salario.ToString();
+                 ipuesto.FRESALARIO = tbPuesto.Frecuencia_del_salario.ToString();
+                 ipuesto.RECIDDEPARTAMENTO = tbPuesto.Departamento.ToString();*/
+
+                dtg.DataSource = tbPuesto;
+                dtg.Columns[0].HeaderText = "Codigo Puesto";
+                dtg.Columns[1].HeaderText = "Puesto";
+                dtg.Columns[2].HeaderText = "Departamento";
+                dtg.Columns[3].HeaderText = "Disponible";
+                dtg.Columns[4].Visible = false;
+                dtg.Columns[5].Visible = false;
+                dtg.Columns[6].Visible = false;
+                dtg.Columns[7].Visible = false;
+
+                dtg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            }
+
+        }
     }
 }

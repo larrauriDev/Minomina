@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Minomina.IViews;
 using Minomina.Presentation;
+using Minomina.Helpers;
 
 namespace Minomina.WindowsUser
 {
@@ -20,13 +21,15 @@ namespace Minomina.WindowsUser
         string IPuesto.CANTIDAD { get => tbCantidadpuesto.Text; set => tbCantidadpuesto.Text = value; }
         string IPuesto.FRESALARIO { get => cbFrecueciaSalario.Text; set => cbFrecueciaSalario.Text = value; }
         string IPuesto.PAGOSHORAS { get => tbPagoHoras.Text; set => tbPagoHoras.Text = value; }
-        string IPuesto.RECIDDEPARTAMENTO { get => cbDepartamento.SelectedValue.ToString(); set => cbDepartamento.SelectedValue = value; }
+        int IPuesto.RECIDDEPARTAMENTO { get => int.Parse(cbDepartamento.SelectedValue.ToString()); set => cbDepartamento.SelectedValue = value; }
         string IPuesto.DEBERES { get => tbDeberes.Text; set => tbDeberes.Text = value; }
         string IPuesto.IDPUESTO { get => tbID.Text; set => tbID.Text = value; }
-
         public PuestoTrabajo()
         {
             InitializeComponent();
+            PPuesto pue = new PPuesto(this);
+            pue.FillComboDepar(cbDepartamento);
+            pue.CompletaDatagrid(dataGridPuesto);
         }
 
         private void btAgregarPuesto_MouseEnter(object sender, EventArgs e)
@@ -78,15 +81,64 @@ namespace Minomina.WindowsUser
 
         private void btguardar_Click(object sender, EventArgs e)
         {
+           
             PPuesto puesto = new PPuesto(this);
 
-            puesto.InsertaPuesto(PuestoTrabajo.ActiveForm);
+            //puesto.InsertaPuesto(PuestoTrabajo.ActiveForm);
+            puesto.InsertarActualizar(PuestoTrabajo.ActiveForm, dataGridPuesto, tbID,time,lbcreado);
         }
 
         private void tbSalario_Leave(object sender, EventArgs e)
         {
             PPuesto puesto = new PPuesto(this);
             puesto.CalculoHorasSalario();
+        }
+
+        private void tbSalario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            PPuesto pues = new PPuesto(this);
+
+            pues.ValidaDataType(sender, e);
+        }
+
+        private void tbCantidadpuesto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            PPuesto pues = new PPuesto(this);
+
+            pues.ValidaDataType(sender, e);
+
+        }
+
+        private void dataGridPuesto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+                return;
+            tbPuesto.Text = dataGridPuesto.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tbPagoHoras.Text = dataGridPuesto.Rows[e.RowIndex].Cells[4].Value.ToString();
+            tbSalario.Text = dataGridPuesto.Rows[e.RowIndex].Cells[5].Value.ToString();
+            tbDeberes.Text = dataGridPuesto.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cbFrecueciaSalario.Text = dataGridPuesto.Rows[e.RowIndex].Cells[7].Value.ToString();
+            tbCantidadpuesto.Text = dataGridPuesto.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cbDepartamento.Text = dataGridPuesto.Rows[e.RowIndex].Cells[2].Value.ToString();
+            tbID.Text = dataGridPuesto.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
+
+        private void btBuscar_Click(object sender, EventArgs e)
+        {
+            PPuesto puesto = new PPuesto(this);
+            puesto.BuscarPuesto(dataGridPuesto);
+            time.Start();
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            HelperForms.ClearControllers(PuestoTrabajo.ActiveForm);
+        }
+
+        private void time_Tick(object sender, EventArgs e)
+        {
+            lbcreado.Visible = false;
+            time.Stop();
         }
     }
 }

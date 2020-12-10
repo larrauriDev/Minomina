@@ -29,30 +29,50 @@ namespace Minomina.Presentation
             mPuesto.PAGOSHORAS = float.Parse(ipuesto.PAGOSHORAS);
             mPuesto.SALARIO = float.Parse(ipuesto.SALARIO);
             mPuesto.DEBERES = ipuesto.DEBERES;
+            mPuesto.IDPUESTO = ipuesto.IDPUESTO;
         }
-        public void InsertaPuesto(Form pt) {
-
-            
+        public void InsertaPuesto(Form pt,Timer time,Label lb) {
 
             if (HelperForms.CheckEmpy(pt))
                 return;
+
             ConnectionModelPuesto();
             mPuesto.InsertarPuesto();
+            HelperForms.ClearControllers(pt);
+            lb.Visible = true;
+            time.Start();
         }
         public void UpdateData(Form pt) {
 
-            ConnectionModelPuesto();
+            
             if (HelperForms.CheckEmpy(pt))
             {
                 return;
             }
-            if (ipuesto.IDPUESTO == "")
+
+            ConnectionModelPuesto();
+
+            if (mPuesto.ExisteID()<=0)
             {
                 MessageBox.Show("No hay registro para actualizar", "Ingresar Datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
+            ConnectionModelPuesto();
             mPuesto.UpdateData();
+        }
+        public void InsertarActualizar(Form pt, DataGridView dtg, TextBox tb, Timer time,Label lb) {
+            if (tb.Text == "")
+            {
+                InsertaPuesto(pt,time,lb);
+            }
+            else
+                UpdateData(pt);
+
+            CompletaDatagrid(dtg);
+            HelperForms.ClearControllers(pt);
+
+
         }
         public void CalculoHorasSalario()
         {
@@ -60,6 +80,25 @@ namespace Minomina.Presentation
             ipuesto.PAGOSHORAS = (ordinario / (int)8).ToString();
 
         }
+        public void FillComboDepar(ComboBox cb) {
+            cb = mPuesto.FillComboDepartamento(cb);
+        
+        }
+        public void ValidaDataType(object sender, KeyPressEventArgs e) {
+            HelperForms.ValidaDatos(e, sender);
+        
+        }
+        public void CompletaDatagrid(DataGridView dtg)
+        {
+            mPuesto.FillDataGrid(dtg);
 
+        }
+        public void BuscarPuesto(DataGridView dtg) {
+            mPuesto.IDPUESTO = ipuesto.IDPUESTO;
+            mPuesto.BuscarPuesto(dtg);
+            
+        
+        }
     }
+
 }

@@ -13,7 +13,7 @@ namespace Minomina.IViews
         string CANTIDAD { get; set; }
         string FRESALARIO { get; set; }
         string PAGOSHORAS { get; set; }
-        string RECIDDEPARTAMENTO { get; set; }
+        int RECIDDEPARTAMENTO { get; set; }
         string DEBERES { get; set; }
         string IDPUESTO { get; set; }
     }

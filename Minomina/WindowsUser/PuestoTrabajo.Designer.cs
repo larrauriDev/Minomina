@@ -30,11 +30,10 @@ namespace Minomina.WindowsUser
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbcreado = new System.Windows.Forms.Label();
-            this.lbAviso = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbDeberes = new System.Windows.Forms.TextBox();
@@ -83,18 +82,6 @@ namespace Minomina.WindowsUser
             this.lbcreado.Text = "Puesto Creado!!!";
             this.lbcreado.Visible = false;
             // 
-            // lbAviso
-            // 
-            this.lbAviso.AutoSize = true;
-            this.lbAviso.BackColor = System.Drawing.Color.Maroon;
-            this.lbAviso.ForeColor = System.Drawing.Color.Yellow;
-            this.lbAviso.Location = new System.Drawing.Point(31, 143);
-            this.lbAviso.Name = "lbAviso";
-            this.lbAviso.Size = new System.Drawing.Size(478, 17);
-            this.lbAviso.TabIndex = 56;
-            this.lbAviso.Text = "Complete los campo para crear puesto, presione \"Guardar\" para confirmar";
-            this.lbAviso.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -142,6 +129,7 @@ namespace Minomina.WindowsUser
             this.btCancelar.TabIndex = 52;
             this.btCancelar.Text = "Cancelar/Limpiar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btguardar
             // 
@@ -169,6 +157,7 @@ namespace Minomina.WindowsUser
             this.btBuscar.TabIndex = 50;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // label13
             // 
@@ -208,14 +197,14 @@ namespace Minomina.WindowsUser
             this.dataGridPuesto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridPuesto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridPuesto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridPuesto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridPuesto.ColumnHeadersHeight = 29;
             this.dataGridPuesto.EnableHeadersVisualStyles = false;
             this.dataGridPuesto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
@@ -223,23 +212,24 @@ namespace Minomina.WindowsUser
             this.dataGridPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridPuesto.Name = "dataGridPuesto";
             this.dataGridPuesto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridPuesto.RowHeadersVisible = false;
             this.dataGridPuesto.RowHeadersWidth = 35;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridPuesto.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridPuesto.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridPuesto.RowTemplate.Height = 24;
             this.dataGridPuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPuesto.Size = new System.Drawing.Size(765, 162);
             this.dataGridPuesto.TabIndex = 47;
+            this.dataGridPuesto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPuesto_CellDoubleClick);
             // 
             // label7
             // 
@@ -258,12 +248,18 @@ namespace Minomina.WindowsUser
             this.cbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(68)))));
             this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Items.AddRange(new object[] {
+            "Mantenimiento",
+            "Tecnologia",
+            "Gestion Humana",
+            "Finanzas",
+            "Calidad",
+            "Distribucion"});
             this.cbDepartamento.Location = new System.Drawing.Point(31, 358);
             this.cbDepartamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(161, 28);
             this.cbDepartamento.TabIndex = 45;
-            this.cbDepartamento.ValueMember = "RECID";
             // 
             // label6
             // 
@@ -286,6 +282,7 @@ namespace Minomina.WindowsUser
             this.tbCantidadpuesto.Name = "tbCantidadpuesto";
             this.tbCantidadpuesto.Size = new System.Drawing.Size(183, 26);
             this.tbCantidadpuesto.TabIndex = 43;
+            this.tbCantidadpuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCantidadpuesto_KeyPress);
             // 
             // label5
             // 
@@ -353,6 +350,7 @@ namespace Minomina.WindowsUser
             this.tbSalario.Name = "tbSalario";
             this.tbSalario.Size = new System.Drawing.Size(183, 26);
             this.tbSalario.TabIndex = 37;
+            this.tbSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSalario_KeyPress);
             this.tbSalario.Leave += new System.EventHandler(this.tbSalario_Leave);
             // 
             // label1
@@ -453,6 +451,7 @@ namespace Minomina.WindowsUser
             // time
             // 
             this.time.Interval = 3000;
+            this.time.Tick += new System.EventHandler(this.time_Tick);
             // 
             // panel1
             // 
@@ -499,7 +498,6 @@ namespace Minomina.WindowsUser
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(867, 566);
             this.Controls.Add(this.lbcreado);
-            this.Controls.Add(this.lbAviso);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbDeberes);
@@ -538,7 +536,6 @@ namespace Minomina.WindowsUser
 
         #endregion
         private System.Windows.Forms.Label lbcreado;
-        private System.Windows.Forms.Label lbAviso;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbDeberes;
