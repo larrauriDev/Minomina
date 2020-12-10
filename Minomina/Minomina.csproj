@@ -104,6 +104,7 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HelperForms.cs" />
+    <Compile Include="IViews\IPuesto.cs" />
     <Compile Include="MainScreen\GestionHumana1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +124,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\MColaborador.cs" />
+    <Compile Include="Models\MPuesto.cs" />
     <Compile Include="NominaCabecera.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
@@ -133,6 +135,7 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PColaborador.cs" />
+    <Compile Include="Presentation\PPuesto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puesto.cs">
@@ -153,6 +156,12 @@
     </Compile>
     <Compile Include="WindowsUser\Colaboradores.Designer.cs">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsUser\PuestoTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsUser\PuestoTrabajo.Designer.cs">
+      <DependentUpon>PuestoTrabajo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainScreen\GestionHumana1.resx">
       <DependentUpon>GestionHumana1.cs</DependentUpon>
@@ -175,6 +184,9 @@
     </Compile>
     <EmbeddedResource Include="WindowsUser\Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsUser\PuestoTrabajo.resx">
+      <DependentUpon>PuestoTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DBMINOMINA.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
