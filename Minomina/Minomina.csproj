@@ -107,6 +107,7 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HelperForms.cs" />
+    <Compile Include="IViews\INovedades.cs" />
     <Compile Include="IViews\IPuesto.cs" />
     <Compile Include="MainScreen\GestionHumana1.cs">
       <SubType>Form</SubType>
@@ -127,6 +128,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\MColaborador.cs" />
+    <Compile Include="Models\MNovedades.cs" />
     <Compile Include="Models\MPuesto.cs" />
     <Compile Include="NominaCabecera.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
@@ -138,6 +140,7 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PColaborador.cs" />
+    <Compile Include="Presentation\PNovedades.cs" />
     <Compile Include="Presentation\PPuesto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,6 +162,12 @@
     </Compile>
     <Compile Include="WindowsUser\Colaboradores.Designer.cs">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsUser\Novedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsUser\Novedades.Designer.cs">
+      <DependentUpon>Novedades.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsUser\PuestoTrabajo.cs">
       <SubType>Form</SubType>
