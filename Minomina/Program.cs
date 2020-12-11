@@ -18,7 +18,7 @@ namespace Minomina
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PuestoTrabajo());
+            Application.Run(new Colaboradores());
         }
     }
 }

@@ -32,5 +32,6 @@ namespace Minomina
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Colaboradore> Colaboradores { get; set; }
+        public virtual Departamento Departamento { get; set; }
     }
 }

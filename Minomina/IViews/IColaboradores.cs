@@ -9,7 +9,7 @@ namespace Minomina.Views
 {
     interface IColaboradores
     {
-        string IDPUESTOTRABAJO { get; set; }
+        int IDPUESTOTRABAJO { get; set; }
         string CODIGOEMPLEADO { get; set; }
         string FECHAINGRESO { get; set; }
         string ESTADOLABORAR { get; set; }

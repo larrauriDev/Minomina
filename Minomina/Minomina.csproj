@@ -82,6 +82,9 @@
     <Compile Include="Colaboradore.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
+    <Compile Include="DatagridColaborador.cs">
+      <DependentUpon>DBMINOMINA.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataGridPuesto.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>

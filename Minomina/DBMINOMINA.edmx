@@ -38,7 +38,6 @@
           <Property Name="Codigo de empleado" Type="varchar" MaxLength="9" StoreGeneratedPattern="Computed" />
           <Property Name="RECIDPUESTO" Type="int" Nullable="false" />
           <Property Name="RolColaborador" Type="varchar" MaxLength="30" />
-          <Property Name="RECIDDEPAR" Type="int" Nullable="false" />
           <Property Name="Estatus Laboral" Type="varchar" MaxLength="20" />
           <Property Name="Nombres" Type="varchar" MaxLength="30" />
           <Property Name="Apellidos" Type="varchar" MaxLength="100" />
@@ -125,6 +124,29 @@
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'MINOMINA.dbo.DatagridColaborador' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DatagridColaborador">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="RECID" Type="int" Nullable="false" />
+          <Property Name="Nombres" Type="varchar" MaxLength="30" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+          <Property Name="Cedula o Pasaporte" Type="varchar" MaxLength="20" />
+          <Property Name="Codigo de empleado" Type="varchar" MaxLength="9" />
+          <Property Name="Fecha de ingreso" Type="datetime" />
+          <Property Name="Direccion" Type="varchar" MaxLength="250" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="Estatus Laboral" Type="varchar" MaxLength="20" />
+          <Property Name="Banco" Type="varchar" MaxLength="20" />
+          <Property Name="Tipo de Cuenta" Type="varchar" MaxLength="10" />
+          <Property Name="Cuenta Bancaria" Type="varchar" MaxLength="20" />
+          <Property Name="Puesto" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Sexo" Type="varchar" MaxLength="10" />
+          <Property Name="Usuario del Sistema" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'MINOMINA.dbo.DataGridPuesto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DataGridPuesto">
           <Key>
@@ -190,18 +212,6 @@ warning 6002: The table/view 'MINOMINA.dbo.DataGridPuesto' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Colaborad__RECID__440B1D61">
-          <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="1" />
-          <End Role="Colaboradores" Type="Self.Colaboradores" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Departamentos">
-              <PropertyRef Name="RECID" />
-            </Principal>
-            <Dependent Role="Colaboradores">
-              <PropertyRef Name="RECIDDEPAR" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__NominaDet__RECID__5AEE82B9">
           <End Role="NominaCabecera" Type="Self.NominaCabecera" Multiplicity="0..1" />
           <End Role="NominaDetalle" Type="Self.NominaDetalle" Multiplicity="*" />
@@ -217,6 +227,18 @@ warning 6002: The table/view 'MINOMINA.dbo.DataGridPuesto' does not have a prima
         <!--Errors Found During Generation:
 warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
         <Association Name="FK__NominaDet__RECID__5BE2A6F2" />-->
+        <Association Name="FK_Puestos_Departamentos">
+          <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+          <End Role="Puestos" Type="Self.Puestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamentos">
+              <PropertyRef Name="RECID" />
+            </Principal>
+            <Dependent Role="Puestos">
+              <PropertyRef Name="RECIDDEPAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -376,6 +398,26 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <EntitySet Name="Novedades" EntityType="Self.Novedades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Puestos" EntityType="Self.Puestos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DatagridColaborador" EntityType="Self.DatagridColaborador" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DatagridColaborador].[RECID] AS [RECID], 
+    [DatagridColaborador].[Nombres] AS [Nombres], 
+    [DatagridColaborador].[Apellidos] AS [Apellidos], 
+    [DatagridColaborador].[Cedula o Pasaporte] AS [Cedula o Pasaporte], 
+    [DatagridColaborador].[Codigo de empleado] AS [Codigo de empleado], 
+    [DatagridColaborador].[Fecha de ingreso] AS [Fecha de ingreso], 
+    [DatagridColaborador].[Direccion] AS [Direccion], 
+    [DatagridColaborador].[Telefono] AS [Telefono], 
+    [DatagridColaborador].[Estatus Laboral] AS [Estatus Laboral], 
+    [DatagridColaborador].[Banco] AS [Banco], 
+    [DatagridColaborador].[Tipo de Cuenta] AS [Tipo de Cuenta], 
+    [DatagridColaborador].[Cuenta Bancaria] AS [Cuenta Bancaria], 
+    [DatagridColaborador].[Puesto] AS [Puesto], 
+    [DatagridColaborador].[Email] AS [Email], 
+    [DatagridColaborador].[Sexo] AS [Sexo], 
+    [DatagridColaborador].[Usuario del Sistema] AS [Usuario del Sistema]
+    FROM [dbo].[DatagridColaborador] AS [DatagridColaborador]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="DataGridPuesto" EntityType="Self.DataGridPuesto" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [DataGridPuesto].[RECID] AS [RECID], 
@@ -405,13 +447,13 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
             <End Role="Puestos" EntitySet="Puestos" />
             <End Role="Colaboradores" EntitySet="Colaboradores" />
           </AssociationSet>
-          <AssociationSet Name="FK__Colaborad__RECID__440B1D61" Association="Self.FK__Colaborad__RECID__440B1D61">
-            <End Role="Departamentos" EntitySet="Departamentos" />
-            <End Role="Colaboradores" EntitySet="Colaboradores" />
-          </AssociationSet>
           <AssociationSet Name="FK__NominaDet__RECID__5AEE82B9" Association="Self.FK__NominaDet__RECID__5AEE82B9">
             <End Role="NominaCabecera" EntitySet="NominaCabecera" />
             <End Role="NominaDetalle" EntitySet="NominaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Puestos_Departamentos" Association="Self.FK_Puestos_Departamentos">
+            <End Role="Departamentos" EntitySet="Departamentos" />
+            <End Role="Puestos" EntitySet="Puestos" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -455,7 +497,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Name="Codigo_de_empleado" Type="String" MaxLength="9" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="RECIDPUESTO" Type="Int32" Nullable="false" />
           <Property Name="RolColaborador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="RECIDDEPAR" Type="Int32" Nullable="false" />
           <Property Name="Estatus_Laboral" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Nombres" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -472,7 +513,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AsigCabeceras" Relationship="Self.FK__AsigCabec__RECID__4F7CD00D" FromRole="Colaboradores" ToRole="AsigCabecera" />
           <NavigationProperty Name="Puesto" Relationship="Self.FK__Colaborad__RECID__4316F928" FromRole="Colaboradores" ToRole="Puestos" />
-          <NavigationProperty Name="Departamento" Relationship="Self.FK__Colaborad__RECID__440B1D61" FromRole="Colaboradores" ToRole="Departamentos" />
         </EntityType>
         <EntityType Name="Departamento">
           <Key>
@@ -481,7 +521,7 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Name="RECID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Codigo_de_Departamento" Type="String" MaxLength="9" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="Departamento1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Colaboradores" Relationship="Self.FK__Colaborad__RECID__440B1D61" FromRole="Departamentos" ToRole="Colaboradores" />
+          <NavigationProperty Name="Puestos" Relationship="MINOMINAModel.FK_Puestos_Departamentos" FromRole="Departamento" ToRole="Puesto" />
         </EntityType>
         <EntityType Name="NominaCabecera">
           <Key>
@@ -538,6 +578,7 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Name="Deberes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="RECIDDEPAR" Type="Int32" />
           <NavigationProperty Name="Colaboradores" Relationship="Self.FK__Colaborad__RECID__4316F928" FromRole="Puestos" ToRole="Colaboradores" />
+          <NavigationProperty Name="Departamento" Relationship="MINOMINAModel.FK_Puestos_Departamentos" FromRole="Puesto" ToRole="Departamento" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -613,18 +654,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Colaborad__RECID__440B1D61">
-          <End Role="Departamentos" Type="Self.Departamento" Multiplicity="1" />
-          <End Role="Colaboradores" Type="Self.Colaboradore" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Departamentos">
-              <PropertyRef Name="RECID" />
-            </Principal>
-            <Dependent Role="Colaboradores">
-              <PropertyRef Name="RECIDDEPAR" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__NominaDet__RECID__5AEE82B9">
           <End Role="NominaCabecera" Type="Self.NominaCabecera" Multiplicity="0..1" />
           <End Role="NominaDetalle" Type="Self.NominaDetalle" Multiplicity="*" />
@@ -662,10 +691,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           </AssociationSet>
           <AssociationSet Name="FK__Colaborad__RECID__4316F928" Association="Self.FK__Colaborad__RECID__4316F928">
             <End Role="Puestos" EntitySet="Puestos" />
-            <End Role="Colaboradores" EntitySet="Colaboradores" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Colaborad__RECID__440B1D61" Association="Self.FK__Colaborad__RECID__440B1D61">
-            <End Role="Departamentos" EntitySet="Departamentos" />
             <End Role="Colaboradores" EntitySet="Colaboradores" />
           </AssociationSet>
           <AssociationSet Name="FK__NominaDet__RECID__5AEE82B9" Association="Self.FK__NominaDet__RECID__5AEE82B9">
@@ -820,6 +845,11 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
             <Parameter Name="Fechaingreso" Mode="In" Type="DateTime" />
             <Parameter Name="UsuarioSistema" Mode="In" Type="Boolean" />
           </FunctionImport>
+          <EntitySet Name="DatagridColaboradors" EntityType="MINOMINAModel.DatagridColaborador" />
+          <AssociationSet Name="FK_Puestos_Departamentos" Association="MINOMINAModel.FK_Puestos_Departamentos">
+            <End Role="Departamento" EntitySet="Departamentos" />
+            <End Role="Puesto" EntitySet="Puestos" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -832,6 +862,39 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="DatagridColaborador">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="RECID" Type="Int32" Nullable="false" />
+          <Property Name="Nombres" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Cedula_o_Pasaporte" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo_de_empleado" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_de_ingreso" Type="DateTime" Precision="3" />
+          <Property Name="Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus_Laboral" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Banco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo_de_Cuenta" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Cuenta_Bancaria" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Puesto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_del_Sistema" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_Puestos_Departamentos">
+          <End Type="MINOMINAModel.Departamento" Role="Departamento" Multiplicity="0..1" />
+          <End Type="MINOMINAModel.Puesto" Role="Puesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="RECID" />
+            </Principal>
+            <Dependent Role="Puesto">
+              <PropertyRef Name="RECIDDEPAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -872,7 +935,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
                 <ScalarProperty Name="Codigo_de_empleado" ColumnName="Codigo de empleado" />
                 <ScalarProperty Name="RECIDPUESTO" ColumnName="RECIDPUESTO" />
                 <ScalarProperty Name="RolColaborador" ColumnName="RolColaborador" />
-                <ScalarProperty Name="RECIDDEPAR" ColumnName="RECIDDEPAR" />
                 <ScalarProperty Name="Estatus_Laboral" ColumnName="Estatus Laboral" />
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
                 <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
@@ -1021,6 +1083,28 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <FunctionImportMapping FunctionImportName="sp_UpdatePuesto" FunctionName="MINOMINAModel.Store.sp_UpdatePuesto" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MINOMINAModel.Store.sp_upgraddiagrams" />
           <FunctionImportMapping FunctionImportName="SP_InsertColaboradores" FunctionName="MINOMINAModel.Store.SP_InsertColaboradores" />
+          <EntitySetMapping Name="DatagridColaboradors">
+            <EntityTypeMapping TypeName="MINOMINAModel.DatagridColaborador">
+              <MappingFragment StoreEntitySet="DatagridColaborador">
+                <ScalarProperty Name="Usuario_del_Sistema" ColumnName="Usuario del Sistema" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+                <ScalarProperty Name="Cuenta_Bancaria" ColumnName="Cuenta Bancaria" />
+                <ScalarProperty Name="Tipo_de_Cuenta" ColumnName="Tipo de Cuenta" />
+                <ScalarProperty Name="Banco" ColumnName="Banco" />
+                <ScalarProperty Name="Estatus_Laboral" ColumnName="Estatus Laboral" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Fecha_de_ingreso" ColumnName="Fecha de ingreso" />
+                <ScalarProperty Name="Codigo_de_empleado" ColumnName="Codigo de empleado" />
+                <ScalarProperty Name="Cedula_o_Pasaporte" ColumnName="Cedula o Pasaporte" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

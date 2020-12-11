@@ -140,5 +140,10 @@ namespace Minomina.WindowsUser
             lbcreado.Visible = false;
             time.Stop();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

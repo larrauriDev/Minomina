@@ -17,7 +17,7 @@ namespace Minomina.WindowsUser
 {
     public partial class Colaboradores : Form, IColaboradores
     {
-        string IColaboradores.IDPUESTOTRABAJO { get => cbPuesto.SelectedValue.ToString(); set =>  cbPuesto.SelectedValue = value; }
+        int IColaboradores.IDPUESTOTRABAJO { get => int.Parse(cbPuesto.SelectedValue.ToString()); set =>  cbPuesto.SelectedValue = value; }
         string IColaboradores.CODIGOEMPLEADO { get => tbID.Text; set => tbID.Text = value; }
         string IColaboradores.FECHAINGRESO { get => dtpFechaIngreso.Text; set => dtpFechaIngreso.Text = value; }
         string IColaboradores.ESTADOLABORAR { get => cbEstado.Text; set => cbEstado.Text = value; }
@@ -36,7 +36,11 @@ namespace Minomina.WindowsUser
         public Colaboradores()
         {
             InitializeComponent();
-            
+            PColaborador cola = new PColaborador(this);
+            cola.FillComboPueso(cbPuesto);
+            cola.FillDataGrid(dataGridColaboradores);
+
+
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -90,11 +94,9 @@ namespace Minomina.WindowsUser
 
         private void btAgregarColaborador_Click(object sender, EventArgs e)
         {
-            HelperForms.ClearGroupBox(groupBox1);
-            HelperForms.ClearControllers(Colaboradores.ActiveForm);
-            lbAviso.Visible = true;
-            tbID.Enabled = false;
-            btAgregarColaborador.Enabled = false;
+
+            PColaborador cola = new PColaborador(this);
+            cola.EventosBotonCrear(Colaboradores.ActiveForm, groupBox1, lbAviso, tbID);
         }
 
         private void time_Tick(object sender, EventArgs e)
@@ -105,33 +107,49 @@ namespace Minomina.WindowsUser
 
         private void button2_Click(object sender, EventArgs e)
         {
-           // Form t = this;
-           
             PColaborador cola = new PColaborador(this);
-            cola.InsertaColaborador(Colaboradores.ActiveForm);
-           /* if (HelperForms.CheckEmpy(t))
-                return;
-            if (tbID.Text == "" && tbID.Enabled == false)
-            {
-                //cola.InsertaColaborador(Colaboradores.ActiveForm);
-                lbAviso.Visible = false;
-                lbcreado.Visible = true;
-                time.Enabled = true;
-                time.Start();
-                
-                /* if (time.GetLifetimeService().Equals(3000))
-                 {
-                     time.Stop();
-                 }
-            }
-            else if (tbID.Text != "")
-            {
-                //cola.UpdateColaborador();
-            }
-            //cola.CompletaDatagrid(dataGridColaboradores);
-            if (tbID.Enabled == false)
-                tbID.Enabled = true;*/
+            cola.InsertarActualizar(Colaboradores.ActiveForm, dataGridColaboradores, tbID, time, lbcreado,lbAviso, groupBox1);
         }
 
+        private void dataGridColaboradores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbID.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbNombre.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tbApellido.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[2].Value.ToString();
+            dtpFechaIngreso.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cbPuesto.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[4].Value.ToString();
+            tbTele.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[5].Value.ToString();
+            tbMail.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[6].Value.ToString();
+            cbSexo.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[7].Value.ToString();
+            cbTipoCuenta.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[8].Value.ToString();
+            tbCuentabancaria.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[9].Value.ToString();
+            tbCedula.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[10].Value.ToString();
+            tbDireccion.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[11].Value.ToString();
+            tbBanco.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[12].Value.ToString();
+            cbEstado.Text = dataGridColaboradores.Rows[e.RowIndex].Cells[13].Value.ToString();
+            if (dataGridColaboradores.Rows[e.RowIndex].Cells[14].Value is true)
+                ckUsuario.Checked = true;
+            else
+                ckUsuario.Checked = false;
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            PColaborador cola = new PColaborador();
+            cola.LimpiarControles(Colaboradores.ActiveForm,groupBox1,tbID, lbAviso);;
+        }
+
+        private void btBuscar_Click(object sender, EventArgs e)
+        {
+            PColaborador cola = new PColaborador(this);
+            cola.BuscarEmpleado(dataGridColaboradores);
+        }
+
+        private void btEliminar_Click(object sender, EventArgs e)
+        {
+            PColaborador cola = new PColaborador(this);
+            cola.BorrarColaborador(dataGridColaboradores,Colaboradores.ActiveForm,groupBox1);
+            
+        }
     }
 }

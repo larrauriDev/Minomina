@@ -30,13 +30,12 @@ namespace Minomina.WindowsUser
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btBuscar = new System.Windows.Forms.Button();
             this.ckUsuario = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btAgregarColaborador = new System.Windows.Forms.Button();
             this.dataGridColaboradores = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbTipoCuenta = new System.Windows.Forms.ComboBox();
@@ -60,10 +59,6 @@ namespace Minomina.WindowsUser
             this.lbAviso = new System.Windows.Forms.Label();
             this.tbTele = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.btMaximizar = new System.Windows.Forms.Button();
-            this.btNormal = new System.Windows.Forms.Button();
-            this.CerrarApp = new System.Windows.Forms.Button();
-            this.btMinimizar = new System.Windows.Forms.Button();
             this.cbPuesto = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,7 +76,12 @@ namespace Minomina.WindowsUser
             this.tbID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btMaximizar = new System.Windows.Forms.Button();
+            this.btAgregarColaborador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btNormal = new System.Windows.Forms.Button();
+            this.CerrarApp = new System.Windows.Forms.Button();
+            this.btMinimizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridColaboradores)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,6 +99,7 @@ namespace Minomina.WindowsUser
             this.btBuscar.TabIndex = 49;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // ckUsuario
             // 
@@ -126,23 +127,6 @@ namespace Minomina.WindowsUser
             this.label13.TabIndex = 47;
             this.label13.Text = "Agregar Colaborador";
             // 
-            // btAgregarColaborador
-            // 
-            this.btAgregarColaborador.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btAgregarColaborador.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btAgregarColaborador.BackgroundImage = global::Minomina.Properties.Resources.IconoAgregarColaboradorColor;
-            this.btAgregarColaborador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAgregarColaborador.FlatAppearance.BorderSize = 0;
-            this.btAgregarColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarColaborador.Location = new System.Drawing.Point(68, 50);
-            this.btAgregarColaborador.Name = "btAgregarColaborador";
-            this.btAgregarColaborador.Size = new System.Drawing.Size(43, 39);
-            this.btAgregarColaborador.TabIndex = 46;
-            this.btAgregarColaborador.UseVisualStyleBackColor = false;
-            this.btAgregarColaborador.Click += new System.EventHandler(this.btAgregarColaborador_Click);
-            this.btAgregarColaborador.MouseEnter += new System.EventHandler(this.btAgregarColaborador_MouseEnter);
-            this.btAgregarColaborador.MouseLeave += new System.EventHandler(this.btAgregarColaborador_MouseLeave);
-            // 
             // dataGridColaboradores
             // 
             this.dataGridColaboradores.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -151,14 +135,14 @@ namespace Minomina.WindowsUser
             this.dataGridColaboradores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridColaboradores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridColaboradores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridColaboradores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridColaboradores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridColaboradores.ColumnHeadersHeight = 25;
             this.dataGridColaboradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridColaboradores.EnableHeadersVisualStyles = false;
@@ -168,22 +152,23 @@ namespace Minomina.WindowsUser
             this.dataGridColaboradores.Name = "dataGridColaboradores";
             this.dataGridColaboradores.ReadOnly = true;
             this.dataGridColaboradores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridColaboradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridColaboradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridColaboradores.RowHeadersVisible = false;
             this.dataGridColaboradores.RowHeadersWidth = 35;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.dataGridColaboradores.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            this.dataGridColaboradores.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridColaboradores.RowTemplate.Height = 24;
             this.dataGridColaboradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridColaboradores.Size = new System.Drawing.Size(1339, 300);
             this.dataGridColaboradores.TabIndex = 45;
+            this.dataGridColaboradores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridColaboradores_CellDoubleClick);
             // 
             // panel2
             // 
@@ -195,6 +180,7 @@ namespace Minomina.WindowsUser
             // 
             // cbTipoCuenta
             // 
+            this.cbTipoCuenta.BackColor = System.Drawing.Color.LightGray;
             this.cbTipoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(68)))));
             this.cbTipoCuenta.FormattingEnabled = true;
@@ -227,6 +213,7 @@ namespace Minomina.WindowsUser
             this.btCancelar.TabIndex = 51;
             this.btCancelar.Text = "Cancelar/Limpiar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // button2
             // 
@@ -263,6 +250,7 @@ namespace Minomina.WindowsUser
             this.btEliminar.TabIndex = 55;
             this.btEliminar.Text = "Eliminar";
             this.btEliminar.UseVisualStyleBackColor = true;
+            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
             // 
             // label17
             // 
@@ -308,6 +296,7 @@ namespace Minomina.WindowsUser
             // 
             // cbSexo
             // 
+            this.cbSexo.BackColor = System.Drawing.Color.LightGray;
             this.cbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(68)))));
             this.cbSexo.FormattingEnabled = true;
@@ -426,76 +415,14 @@ namespace Minomina.WindowsUser
             this.cbEstado.Size = new System.Drawing.Size(190, 28);
             this.cbEstado.TabIndex = 41;
             // 
-            // btMaximizar
-            // 
-            this.btMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btMaximizar.BackColor = System.Drawing.Color.Silver;
-            this.btMaximizar.BackgroundImage = global::Minomina.Properties.Resources.RestoreDown;
-            this.btMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btMaximizar.FlatAppearance.BorderSize = 0;
-            this.btMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMaximizar.Location = new System.Drawing.Point(1351, 2);
-            this.btMaximizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btMaximizar.Name = "btMaximizar";
-            this.btMaximizar.Size = new System.Drawing.Size(35, 33);
-            this.btMaximizar.TabIndex = 5;
-            this.btMaximizar.UseVisualStyleBackColor = false;
-            this.btMaximizar.Click += new System.EventHandler(this.btMaximizar_Click);
-            // 
-            // btNormal
-            // 
-            this.btNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btNormal.BackgroundImage = global::Minomina.Properties.Resources.Mini;
-            this.btNormal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btNormal.FlatAppearance.BorderSize = 0;
-            this.btNormal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNormal.Location = new System.Drawing.Point(1351, 6);
-            this.btNormal.Margin = new System.Windows.Forms.Padding(0);
-            this.btNormal.Name = "btNormal";
-            this.btNormal.Size = new System.Drawing.Size(35, 33);
-            this.btNormal.TabIndex = 3;
-            this.btNormal.UseVisualStyleBackColor = true;
-            this.btNormal.Click += new System.EventHandler(this.btNormal_Click);
-            // 
-            // CerrarApp
-            // 
-            this.CerrarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CerrarApp.BackgroundImage = global::Minomina.Properties.Resources.Cierre;
-            this.CerrarApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarApp.FlatAppearance.BorderSize = 0;
-            this.CerrarApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarApp.Location = new System.Drawing.Point(1386, 1);
-            this.CerrarApp.Margin = new System.Windows.Forms.Padding(0);
-            this.CerrarApp.Name = "CerrarApp";
-            this.CerrarApp.Size = new System.Drawing.Size(35, 33);
-            this.CerrarApp.TabIndex = 4;
-            this.CerrarApp.UseVisualStyleBackColor = true;
-            this.CerrarApp.Click += new System.EventHandler(this.CerrarApp_Click);
-            // 
-            // btMinimizar
-            // 
-            this.btMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btMinimizar.BackgroundImage = global::Minomina.Properties.Resources.Minimizar;
-            this.btMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btMinimizar.FlatAppearance.BorderSize = 0;
-            this.btMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimizar.Location = new System.Drawing.Point(1313, 11);
-            this.btMinimizar.Name = "btMinimizar";
-            this.btMinimizar.Size = new System.Drawing.Size(35, 26);
-            this.btMinimizar.TabIndex = 6;
-            this.btMinimizar.UseVisualStyleBackColor = true;
-            this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
-            // 
             // cbPuesto
             // 
             this.cbPuesto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbPuesto.BackColor = System.Drawing.Color.LightGray;
             this.cbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(68)))));
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Items.AddRange(new object[] {
-            "Programador",
-            "Lider Proyecto"});
             this.cbPuesto.Location = new System.Drawing.Point(68, 235);
             this.cbPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPuesto.MaxDropDownItems = 50;
@@ -706,6 +633,39 @@ namespace Minomina.WindowsUser
             this.panel1.TabIndex = 35;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // btMaximizar
+            // 
+            this.btMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMaximizar.BackColor = System.Drawing.Color.Silver;
+            this.btMaximizar.BackgroundImage = global::Minomina.Properties.Resources.RestoreDown;
+            this.btMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btMaximizar.FlatAppearance.BorderSize = 0;
+            this.btMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMaximizar.Location = new System.Drawing.Point(1351, 2);
+            this.btMaximizar.Margin = new System.Windows.Forms.Padding(0);
+            this.btMaximizar.Name = "btMaximizar";
+            this.btMaximizar.Size = new System.Drawing.Size(35, 33);
+            this.btMaximizar.TabIndex = 5;
+            this.btMaximizar.UseVisualStyleBackColor = false;
+            this.btMaximizar.Click += new System.EventHandler(this.btMaximizar_Click);
+            // 
+            // btAgregarColaborador
+            // 
+            this.btAgregarColaborador.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btAgregarColaborador.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btAgregarColaborador.BackgroundImage = global::Minomina.Properties.Resources.IconoAgregarColaboradorColor;
+            this.btAgregarColaborador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAgregarColaborador.FlatAppearance.BorderSize = 0;
+            this.btAgregarColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAgregarColaborador.Location = new System.Drawing.Point(68, 50);
+            this.btAgregarColaborador.Name = "btAgregarColaborador";
+            this.btAgregarColaborador.Size = new System.Drawing.Size(43, 39);
+            this.btAgregarColaborador.TabIndex = 46;
+            this.btAgregarColaborador.UseVisualStyleBackColor = false;
+            this.btAgregarColaborador.Click += new System.EventHandler(this.btAgregarColaborador_Click);
+            this.btAgregarColaborador.MouseEnter += new System.EventHandler(this.btAgregarColaborador_MouseEnter);
+            this.btAgregarColaborador.MouseLeave += new System.EventHandler(this.btAgregarColaborador_MouseLeave);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -716,6 +676,50 @@ namespace Minomina.WindowsUser
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
+            // 
+            // btNormal
+            // 
+            this.btNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btNormal.BackgroundImage = global::Minomina.Properties.Resources.Mini;
+            this.btNormal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNormal.FlatAppearance.BorderSize = 0;
+            this.btNormal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNormal.Location = new System.Drawing.Point(1351, 6);
+            this.btNormal.Margin = new System.Windows.Forms.Padding(0);
+            this.btNormal.Name = "btNormal";
+            this.btNormal.Size = new System.Drawing.Size(35, 33);
+            this.btNormal.TabIndex = 3;
+            this.btNormal.UseVisualStyleBackColor = true;
+            this.btNormal.Click += new System.EventHandler(this.btNormal_Click);
+            // 
+            // CerrarApp
+            // 
+            this.CerrarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarApp.BackgroundImage = global::Minomina.Properties.Resources.Cierre;
+            this.CerrarApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarApp.FlatAppearance.BorderSize = 0;
+            this.CerrarApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarApp.Location = new System.Drawing.Point(1386, 1);
+            this.CerrarApp.Margin = new System.Windows.Forms.Padding(0);
+            this.CerrarApp.Name = "CerrarApp";
+            this.CerrarApp.Size = new System.Drawing.Size(35, 33);
+            this.CerrarApp.TabIndex = 4;
+            this.CerrarApp.UseVisualStyleBackColor = true;
+            this.CerrarApp.Click += new System.EventHandler(this.CerrarApp_Click);
+            // 
+            // btMinimizar
+            // 
+            this.btMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMinimizar.BackgroundImage = global::Minomina.Properties.Resources.Minimizar;
+            this.btMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btMinimizar.FlatAppearance.BorderSize = 0;
+            this.btMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMinimizar.Location = new System.Drawing.Point(1313, 11);
+            this.btMinimizar.Name = "btMinimizar";
+            this.btMinimizar.Size = new System.Drawing.Size(35, 26);
+            this.btMinimizar.TabIndex = 6;
+            this.btMinimizar.UseVisualStyleBackColor = true;
+            this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
             // 
             // Colaboradores
             // 

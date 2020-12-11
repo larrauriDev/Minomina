@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="MINOMINAModel.AsigCabecera" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MINOMINAModel.AsigNovedadDetalle" Width="1.5" PointX="7.5" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="MINOMINAModel.Colaboradore" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MINOMINAModel.Departamento" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MINOMINAModel.Departamento" Width="1.5" PointX="0.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MINOMINAModel.NominaCabecera" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MINOMINAModel.NominaDetalle" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MINOMINAModel.Novedade" Width="1.5" PointX="11" PointY="4.5" IsExpanded="true" />
@@ -19,8 +19,9 @@
         <AssociationConnector Association="MINOMINAModel.FK__AsigNoved__RECID__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="MINOMINAModel.FK__AsigNoved__RECID__5441852A" ManuallyRouted="false" />
         <AssociationConnector Association="MINOMINAModel.FK__Colaborad__RECID__4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="MINOMINAModel.FK__Colaborad__RECID__440B1D61" ManuallyRouted="false" />
         <AssociationConnector Association="MINOMINAModel.FK__NominaDet__RECID__5AEE82B9" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MINOMINAModel.DatagridColaborador" Width="1.5" PointX="10.75" PointY="6.875" />
+        <AssociationConnector Association="MINOMINAModel.FK_Puestos_Departamentos" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

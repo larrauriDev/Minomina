@@ -17,7 +17,7 @@ namespace Minomina
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Departamento()
         {
-            this.Colaboradores = new HashSet<Colaboradore>();
+            this.Puestos = new HashSet<Puesto>();
         }
     
         public int RECID { get; set; }
@@ -25,6 +25,6 @@ namespace Minomina
         public string Departamento1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Colaboradore> Colaboradores { get; set; }
+        public virtual ICollection<Puesto> Puestos { get; set; }
     }
 }

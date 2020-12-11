@@ -24,7 +24,6 @@ namespace Minomina
         public string Codigo_de_empleado { get; set; }
         public int RECIDPUESTO { get; set; }
         public string RolColaborador { get; set; }
-        public int RECIDDEPAR { get; set; }
         public string Estatus_Laboral { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
@@ -43,6 +42,5 @@ namespace Minomina
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AsigCabecera> AsigCabeceras { get; set; }
         public virtual Puesto Puesto { get; set; }
-        public virtual Departamento Departamento { get; set; }
     }
 }
