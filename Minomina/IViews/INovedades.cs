@@ -8,5 +8,9 @@ namespace Minomina.IViews
 {
     interface INovedades
     {
+        string IDNOVEDADES { get; set; }
+        string NOMBRE { get; set; }
+        string TIPO { get; set; }
+        bool IMPUESTO { get; set; }
     }
 }

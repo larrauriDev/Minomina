@@ -197,6 +197,9 @@
     <EmbeddedResource Include="WindowsUser\Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WindowsUser\Novedades.resx">
+      <DependentUpon>Novedades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowsUser\PuestoTrabajo.resx">
       <DependentUpon>PuestoTrabajo.cs</DependentUpon>
     </EmbeddedResource>
