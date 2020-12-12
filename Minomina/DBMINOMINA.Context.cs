@@ -156,25 +156,17 @@ namespace Minomina
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
         }
     
-        public virtual int SP_InserAsingCabecera(string iDColaborador, Nullable<int> rEIDColaborador, string colaborador, Nullable<double> total)
+        public virtual int SP_InserAsingCabecera(Nullable<int> rECIDColaborador, string colaborador)
         {
-            var iDColaboradorParameter = iDColaborador != null ?
-                new ObjectParameter("IDColaborador", iDColaborador) :
-                new ObjectParameter("IDColaborador", typeof(string));
-    
-            var rEIDColaboradorParameter = rEIDColaborador.HasValue ?
-                new ObjectParameter("REIDColaborador", rEIDColaborador) :
-                new ObjectParameter("REIDColaborador", typeof(int));
+            var rECIDColaboradorParameter = rECIDColaborador.HasValue ?
+                new ObjectParameter("RECIDColaborador", rECIDColaborador) :
+                new ObjectParameter("RECIDColaborador", typeof(int));
     
             var colaboradorParameter = colaborador != null ?
                 new ObjectParameter("Colaborador", colaborador) :
                 new ObjectParameter("Colaborador", typeof(string));
     
-            var totalParameter = total.HasValue ?
-                new ObjectParameter("Total", total) :
-                new ObjectParameter("Total", typeof(double));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_InserAsingCabecera", iDColaboradorParameter, rEIDColaboradorParameter, colaboradorParameter, totalParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_InserAsingCabecera", rECIDColaboradorParameter, colaboradorParameter);
         }
     
         public virtual int sp_InsertaNovedad(string nombre, string tipo, Nullable<bool> aplicatax)

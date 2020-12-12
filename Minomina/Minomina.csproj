@@ -107,6 +107,7 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HelperForms.cs" />
+    <Compile Include="IViews\IAsignacionesNovedad.cs" />
     <Compile Include="IViews\INovedades.cs" />
     <Compile Include="IViews\IPuesto.cs" />
     <Compile Include="MainScreen\GestionHumana1.cs">
@@ -127,6 +128,7 @@
     <Compile Include="MainScreen\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\MAsignacionNovedad.cs" />
     <Compile Include="Models\MColaborador.cs" />
     <Compile Include="Models\MNovedades.cs" />
     <Compile Include="Models\MPuesto.cs" />
@@ -139,6 +141,7 @@
     <Compile Include="Novedade.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\PAsignacionNovedad.cs" />
     <Compile Include="Presentation\PColaborador.cs" />
     <Compile Include="Presentation\PNovedades.cs" />
     <Compile Include="Presentation\PPuesto.cs" />
@@ -157,6 +160,12 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="IViews\IColaboradores.cs" />
+    <Compile Include="WindowsUser\AsignacionNovedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsUser\AsignacionNovedades.Designer.cs">
+      <DependentUpon>AsignacionNovedades.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowsUser\Colaboradores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +203,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WindowsUser\AsignacionNovedades.resx">
+      <DependentUpon>AsignacionNovedades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WindowsUser\Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,6 +545,9 @@
       <DependentUpon>DBMINOMINA.edmx</DependentUpon>
       <LastGenOutput>DBMINOMINA.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\AgregarNovedadDentro.png" />
+    <None Include="Resources\AgregarNovedadFuera.png" />
+    <None Include="Resources\HeaderAsignacionNovedad.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -29,14 +29,13 @@ namespace Minomina.WindowsUser
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.lbAviso = new System.Windows.Forms.Label();
             this.btGuardar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.btAgregarNovedad = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.ckImpuesto = new System.Windows.Forms.CheckBox();
@@ -46,13 +45,14 @@ namespace Minomina.WindowsUser
             this.label2 = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.dataGridNovedad = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btAgregarNovedad = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btMaximizar = new System.Windows.Forms.Button();
             this.btNormal = new System.Windows.Forms.Button();
             this.CerrarApp = new System.Windows.Forms.Button();
             this.btMinimizar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNovedad)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,24 +108,6 @@ namespace Minomina.WindowsUser
             this.label13.Size = new System.Drawing.Size(127, 20);
             this.label13.TabIndex = 98;
             this.label13.Text = "Crea Novedad";
-            // 
-            // btAgregarNovedad
-            // 
-            this.btAgregarNovedad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btAgregarNovedad.BackColor = System.Drawing.Color.Transparent;
-            this.btAgregarNovedad.BackgroundImage = global::Minomina.Properties.Resources.IconoCreaNoveAfuera;
-            this.btAgregarNovedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAgregarNovedad.FlatAppearance.BorderSize = 0;
-            this.btAgregarNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarNovedad.Location = new System.Drawing.Point(28, 75);
-            this.btAgregarNovedad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btAgregarNovedad.Name = "btAgregarNovedad";
-            this.btAgregarNovedad.Size = new System.Drawing.Size(56, 49);
-            this.btAgregarNovedad.TabIndex = 99;
-            this.btAgregarNovedad.UseVisualStyleBackColor = false;
-            this.btAgregarNovedad.Click += new System.EventHandler(this.btAgregarNovedad_Click);
-            this.btAgregarNovedad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseDown);
-            this.btAgregarNovedad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseUp);
             // 
             // btCancelar
             // 
@@ -236,14 +218,14 @@ namespace Minomina.WindowsUser
             this.dataGridNovedad.BackgroundColor = System.Drawing.Color.White;
             this.dataGridNovedad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridNovedad.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridNovedad.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridNovedad.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridNovedad.ColumnHeadersHeight = 25;
             this.dataGridNovedad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridNovedad.EnableHeadersVisualStyles = false;
@@ -253,23 +235,77 @@ namespace Minomina.WindowsUser
             this.dataGridNovedad.Name = "dataGridNovedad";
             this.dataGridNovedad.ReadOnly = true;
             this.dataGridNovedad.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridNovedad.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridNovedad.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridNovedad.RowHeadersVisible = false;
             this.dataGridNovedad.RowHeadersWidth = 35;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            this.dataGridNovedad.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.dataGridNovedad.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridNovedad.RowTemplate.Height = 24;
             this.dataGridNovedad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridNovedad.Size = new System.Drawing.Size(547, 306);
             this.dataGridNovedad.TabIndex = 87;
             this.dataGridNovedad.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridNovedad_CellDoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 343);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 17);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Tipo Novedad";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btMaximizar);
+            this.panel1.Controls.Add(this.btNormal);
+            this.panel1.Controls.Add(this.CerrarApp);
+            this.panel1.Controls.Add(this.btMinimizar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(832, 42);
+            this.panel1.TabIndex = 86;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btAgregarNovedad
+            // 
+            this.btAgregarNovedad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btAgregarNovedad.BackColor = System.Drawing.Color.Transparent;
+            this.btAgregarNovedad.BackgroundImage = global::Minomina.Properties.Resources.IconoCreaNoveAfuera;
+            this.btAgregarNovedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAgregarNovedad.FlatAppearance.BorderSize = 0;
+            this.btAgregarNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAgregarNovedad.Location = new System.Drawing.Point(28, 75);
+            this.btAgregarNovedad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btAgregarNovedad.Name = "btAgregarNovedad";
+            this.btAgregarNovedad.Size = new System.Drawing.Size(56, 49);
+            this.btAgregarNovedad.TabIndex = 99;
+            this.btAgregarNovedad.UseVisualStyleBackColor = false;
+            this.btAgregarNovedad.Click += new System.EventHandler(this.btAgregarNovedad_Click);
+            this.btAgregarNovedad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseDown);
+            this.btAgregarNovedad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::Minomina.Properties.Resources.HeaderNovedad;
+            this.pictureBox1.Location = new System.Drawing.Point(305, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 97;
+            this.pictureBox1.TabStop = false;
             // 
             // btMaximizar
             // 
@@ -329,42 +365,6 @@ namespace Minomina.WindowsUser
             this.btMinimizar.TabIndex = 6;
             this.btMinimizar.UseVisualStyleBackColor = true;
             this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 343);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 17);
-            this.label1.TabIndex = 90;
-            this.label1.Text = "Tipo Novedad";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btMaximizar);
-            this.panel1.Controls.Add(this.btNormal);
-            this.panel1.Controls.Add(this.CerrarApp);
-            this.panel1.Controls.Add(this.btMinimizar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 42);
-            this.panel1.TabIndex = 86;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::Minomina.Properties.Resources.HeaderNovedad;
-            this.pictureBox1.Location = new System.Drawing.Point(305, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 97;
-            this.pictureBox1.TabStop = false;
             // 
             // Novedades
             // 

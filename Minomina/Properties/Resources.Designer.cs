@@ -63,6 +63,26 @@ namespace Minomina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AgregarNovedadDentro {
+            get {
+                object obj = ResourceManager.GetObject("AgregarNovedadDentro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AgregarNovedadFuera {
+            get {
+                object obj = ResourceManager.GetObject("AgregarNovedadFuera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonSingin {
             get {
                 object obj = ResourceManager.GetObject("BotonSingin", resourceCulture);
@@ -226,6 +246,16 @@ namespace Minomina.Properties {
         internal static System.Drawing.Bitmap FondosPresentacion03 {
             get {
                 object obj = ResourceManager.GetObject("FondosPresentacion03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HeaderAsignacionNovedad {
+            get {
+                object obj = ResourceManager.GetObject("HeaderAsignacionNovedad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -277,10 +277,8 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Parameter Name="owner_id" Type="int" Mode="In" />
         </Function>
         <Function Name="SP_InserAsingCabecera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="IDColaborador" Type="varchar" Mode="In" />
-          <Parameter Name="REIDColaborador" Type="int" Mode="In" />
+          <Parameter Name="RECIDColaborador" Type="int" Mode="In" />
           <Parameter Name="Colaborador" Type="varchar" Mode="In" />
-          <Parameter Name="Total" Type="float" Mode="In" />
         </Function>
         <Function Name="sp_InsertaNovedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre" Type="varchar" Mode="In" />
@@ -734,10 +732,8 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SP_InserAsingCabecera">
-            <Parameter Name="IDColaborador" Mode="In" Type="String" />
-            <Parameter Name="REIDColaborador" Mode="In" Type="Int32" />
+            <Parameter Name="RECIDColaborador" Mode="In" Type="Int32" />
             <Parameter Name="Colaborador" Mode="In" Type="String" />
-            <Parameter Name="Total" Mode="In" Type="Double" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertaNovedad">
             <Parameter Name="nombre" Mode="In" Type="String" />
