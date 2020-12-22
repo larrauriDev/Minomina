@@ -64,5 +64,28 @@ namespace Minomina.Presentation
             tb.Text = mAsig.NombreColaborador();
         
         }
+        public void FillComboDatagrid(DataGridViewComboBoxColumn dgvc)
+        {
+            mAsig.FillComboDatagridView(dgvc);
+        
+        }
+        public void CompleteDesNoverdad(DataGridViewRow dgr) {
+
+            mAsig.RECIDNOVEDAD =int.Parse( dgr.Cells[1].Value.ToString());
+            mAsig.CompletaDescripcionNovedad(dgr);
+        
+        }
+        public void InsertaDetalleNovedad(DataGridView dtg, DataGridView dtg2) {
+
+            mAsig.InsertNovedadDetalle(dtg);
+            mAsig.FillDagridDetails(dtg);
+            mAsig.FillaDatagridHeader(dtg2);
+        
+        }
+        public void FillDataGridDetails(DataGridView dtg)
+        {
+            mAsig.FillDagridDetails(dtg);
+            
+        }
     }
 }

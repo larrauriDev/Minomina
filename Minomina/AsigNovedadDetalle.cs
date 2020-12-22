@@ -16,13 +16,13 @@ namespace Minomina
     {
         public int RECID { get; set; }
         public Nullable<int> RECIDHEADER { get; set; }
-        public string IDAsignacion { get; set; }
         public Nullable<int> RECIDNOVEDAD { get; set; }
         public string DescNovedad { get; set; }
         public Nullable<double> Monto { get; set; }
         public Nullable<System.DateTime> FechaDesde { get; set; }
         public Nullable<System.DateTime> FechaHasta { get; set; }
         public string TipoNovedad { get; set; }
+        public string IDAsignacionCabecera { get; set; }
     
         public virtual AsigCabecera AsigCabecera { get; set; }
         public virtual Novedade Novedade { get; set; }

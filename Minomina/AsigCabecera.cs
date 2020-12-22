@@ -22,7 +22,6 @@ namespace Minomina
     
         public int RECID { get; set; }
         public string IDRegitro { get; set; }
-        public string IDColaborador { get; set; }
         public Nullable<int> RECIDColaborador { get; set; }
         public string Colaborador { get; set; }
         public Nullable<double> Total { get; set; }

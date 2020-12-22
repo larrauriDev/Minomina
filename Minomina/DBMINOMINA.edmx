@@ -11,7 +11,6 @@
           </Key>
           <Property Name="RECID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDRegitro" Type="varchar" MaxLength="8" StoreGeneratedPattern="Computed" />
-          <Property Name="IDColaborador" Type="varchar" MaxLength="6" />
           <Property Name="RECIDColaborador" Type="int" />
           <Property Name="Colaborador" Type="varchar" MaxLength="30" />
           <Property Name="Total" Type="float" />
@@ -22,9 +21,9 @@
           </Key>
           <Property Name="RECID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RECIDHEADER" Type="int" />
-          <Property Name="IDAsignacion" Type="varchar" MaxLength="6" />
+          <Property Name="IDAsignacionCabecera" Type="varchar(max)" />
           <Property Name="RECIDNOVEDAD" Type="int" />
-          <Property Name="DescNovedad" Type="varchar" MaxLength="30" />
+          <Property Name="DescNovedad" Type="varchar(max)" />
           <Property Name="Monto" Type="float" />
           <Property Name="FechaDesde" Type="date" />
           <Property Name="FechaHasta" Type="date" />
@@ -61,6 +60,15 @@
           <Property Name="Codigo de Departamento" Type="varchar" MaxLength="9" StoreGeneratedPattern="Computed" />
           <Property Name="Departamento" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'MINOMINA.dbo.EscalaSalarial' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="EscalaSalarial">
+          <Property Name="AnualDesde" Type="float" />
+          <Property Name="Anualhasta" Type="float" />
+          <Property Name="MesDesde" Type="float" StoreGeneratedPattern="Computed" />
+          <Property Name="MesHasta" Type="float" StoreGeneratedPattern="Computed" />
+          <Property Name="Porcentaje" Type="float" />
+        </EntityType>-->
         <EntityType Name="NominaCabecera">
           <Key>
             <PropertyRef Name="RECID" />
@@ -310,6 +318,9 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Parameter Name="Fechaingreso" Type="date" Mode="In" />
           <Parameter Name="UsuarioSistema" Type="bit" Mode="In" />
         </Function>
+        <Function Name="sp_InsertDeducciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="recidheader" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_InsertDepartemento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Departmento" Type="varchar" Mode="In" />
         </Function>
@@ -334,7 +345,7 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
         </Function>
         <Function Name="SP_InsertNovedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="RECIDHEADER" Type="int" Mode="In" />
-          <Parameter Name="IDAsignacion" Type="varchar" Mode="In" />
+          <Parameter Name="IDAsignacionCabecera" Type="varchar(max)" Mode="In" />
           <Parameter Name="RECIDNOVEDAD" Type="int" Mode="In" />
           <Parameter Name="DescNovedad" Type="varchar" Mode="In" />
           <Parameter Name="MONTO" Type="float" Mode="In" />
@@ -351,6 +362,17 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_UpdateAsigNovedadDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RECID" Type="int" Mode="In" />
+          <Parameter Name="RECIDHEADER" Type="int" Mode="In" />
+          <Parameter Name="IDAsignacionCabecera" Type="varchar(max)" Mode="In" />
+          <Parameter Name="RECIDNOVEDAD" Type="int" Mode="In" />
+          <Parameter Name="DescNovedad" Type="varchar" Mode="In" />
+          <Parameter Name="MONTO" Type="float" Mode="In" />
+          <Parameter Name="FechaDesde" Type="date" Mode="In" />
+          <Parameter Name="FechaHasta" Type="date" Mode="In" />
+          <Parameter Name="TipoNovedad" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_UpdateColaborador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CodigoEempleado" Type="varchar" Mode="In" />
@@ -386,6 +408,9 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Parameter Name="RECIDDEPAR" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TotalDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+          <Parameter Name="reciadHeader" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="MINOMINAModelStoreContainer">
           <EntitySet Name="AsigCabecera" EntityType="Self.AsigCabecera" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AsigNovedadDetalles" EntityType="Self.AsigNovedadDetalles" Schema="dbo" store:Type="Tables" />
@@ -464,7 +489,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           </Key>
           <Property Name="RECID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDRegitro" Type="String" MaxLength="8" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="IDColaborador" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="RECIDColaborador" Type="Int32" />
           <Property Name="Colaborador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Total" Type="Double" />
@@ -477,15 +501,15 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           </Key>
           <Property Name="RECID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RECIDHEADER" Type="Int32" />
-          <Property Name="IDAsignacion" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
           <Property Name="RECIDNOVEDAD" Type="Int32" />
-          <Property Name="DescNovedad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DescNovedad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Monto" Type="Double" />
           <Property Name="FechaDesde" Type="DateTime" Precision="0" />
           <Property Name="FechaHasta" Type="DateTime" Precision="0" />
           <Property Name="TipoNovedad" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AsigCabecera" Relationship="Self.FK__AsigNoved__RECID__534D60F1" FromRole="AsigNovedadDetalles" ToRole="AsigCabecera" />
           <NavigationProperty Name="Novedade" Relationship="Self.FK__AsigNoved__RECID__5441852A" FromRole="AsigNovedadDetalles" ToRole="Novedades" />
+          <Property Name="IDAsignacionCabecera" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Colaboradore">
           <Key>
@@ -773,7 +797,7 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           </FunctionImport>
           <FunctionImport Name="SP_InsertNovedad">
             <Parameter Name="RECIDHEADER" Mode="In" Type="Int32" />
-            <Parameter Name="IDAsignacion" Mode="In" Type="String" />
+            <Parameter Name="IDAsignacionCabecera" Mode="In" Type="String" />
             <Parameter Name="RECIDNOVEDAD" Mode="In" Type="Int32" />
             <Parameter Name="DescNovedad" Mode="In" Type="String" />
             <Parameter Name="MONTO" Mode="In" Type="Double" />
@@ -846,6 +870,20 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
             <End Role="Departamento" EntitySet="Departamentos" />
             <End Role="Puesto" EntitySet="Puestos" />
           </AssociationSet>
+          <FunctionImport Name="SP_UpdateAsigNovedadDetails">
+            <Parameter Name="RECID" Mode="In" Type="Int32" />
+            <Parameter Name="RECIDHEADER" Mode="In" Type="Int32" />
+            <Parameter Name="IDAsignacionCabecera" Mode="In" Type="String" />
+            <Parameter Name="RECIDNOVEDAD" Mode="In" Type="Int32" />
+            <Parameter Name="DescNovedad" Mode="In" Type="String" />
+            <Parameter Name="MONTO" Mode="In" Type="Double" />
+            <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+            <Parameter Name="TipoNovedad" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertDeducciones">
+          <Parameter Name="recidheader" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -902,7 +940,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
               <MappingFragment StoreEntitySet="AsigCabecera">
                 <ScalarProperty Name="RECID" ColumnName="RECID" />
                 <ScalarProperty Name="IDRegitro" ColumnName="IDRegitro" />
-                <ScalarProperty Name="IDColaborador" ColumnName="IDColaborador" />
                 <ScalarProperty Name="RECIDColaborador" ColumnName="RECIDColaborador" />
                 <ScalarProperty Name="Colaborador" ColumnName="Colaborador" />
                 <ScalarProperty Name="Total" ColumnName="Total" />
@@ -912,9 +949,9 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <EntitySetMapping Name="AsigNovedadDetalles">
             <EntityTypeMapping TypeName="MINOMINAModel.AsigNovedadDetalle">
               <MappingFragment StoreEntitySet="AsigNovedadDetalles">
+                <ScalarProperty Name="IDAsignacionCabecera" ColumnName="IDAsignacionCabecera" />
                 <ScalarProperty Name="RECID" ColumnName="RECID" />
                 <ScalarProperty Name="RECIDHEADER" ColumnName="RECIDHEADER" />
-                <ScalarProperty Name="IDAsignacion" ColumnName="IDAsignacion" />
                 <ScalarProperty Name="RECIDNOVEDAD" ColumnName="RECIDNOVEDAD" />
                 <ScalarProperty Name="DescNovedad" ColumnName="DescNovedad" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
@@ -1101,6 +1138,8 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_UpdateAsigNovedadDetails" FunctionName="MINOMINAModel.Store.SP_UpdateAsigNovedadDetails" />
+          <FunctionImportMapping FunctionImportName="sp_InsertDeducciones" FunctionName="MINOMINAModel.Store.sp_InsertDeducciones" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

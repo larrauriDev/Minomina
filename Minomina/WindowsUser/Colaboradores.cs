@@ -102,6 +102,7 @@ namespace Minomina.WindowsUser
         private void time_Tick(object sender, EventArgs e)
         {
             lbcreado.Visible = false;
+            tbID.Enabled = true;
             time.Stop();
         }
 

@@ -298,15 +298,15 @@ namespace Minomina
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_InsertNominaDetalle", rECIDCabeceraParameter, rECIDAsingCabeceraParameter, iDColaboradorParameter, nombreParameter, totalDeduccionesParameter, totalIngresoParameter, totalPagarParameter, fechaDesdeParameter, fechaHastaParameter);
         }
     
-        public virtual int SP_InsertNovedad(Nullable<int> rECIDHEADER, string iDAsignacion, Nullable<int> rECIDNOVEDAD, string descNovedad, Nullable<double> mONTO, Nullable<System.DateTime> fechaDesde, Nullable<System.DateTime> fechaHasta, string tipoNovedad)
+        public virtual int SP_InsertNovedad(Nullable<int> rECIDHEADER, string iDAsignacionCabecera, Nullable<int> rECIDNOVEDAD, string descNovedad, Nullable<double> mONTO, Nullable<System.DateTime> fechaDesde, Nullable<System.DateTime> fechaHasta, string tipoNovedad)
         {
             var rECIDHEADERParameter = rECIDHEADER.HasValue ?
                 new ObjectParameter("RECIDHEADER", rECIDHEADER) :
                 new ObjectParameter("RECIDHEADER", typeof(int));
     
-            var iDAsignacionParameter = iDAsignacion != null ?
-                new ObjectParameter("IDAsignacion", iDAsignacion) :
-                new ObjectParameter("IDAsignacion", typeof(string));
+            var iDAsignacionCabeceraParameter = iDAsignacionCabecera != null ?
+                new ObjectParameter("IDAsignacionCabecera", iDAsignacionCabecera) :
+                new ObjectParameter("IDAsignacionCabecera", typeof(string));
     
             var rECIDNOVEDADParameter = rECIDNOVEDAD.HasValue ?
                 new ObjectParameter("RECIDNOVEDAD", rECIDNOVEDAD) :
@@ -332,7 +332,7 @@ namespace Minomina
                 new ObjectParameter("TipoNovedad", tipoNovedad) :
                 new ObjectParameter("TipoNovedad", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_InsertNovedad", rECIDHEADERParameter, iDAsignacionParameter, rECIDNOVEDADParameter, descNovedadParameter, mONTOParameter, fechaDesdeParameter, fechaHastaParameter, tipoNovedadParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_InsertNovedad", rECIDHEADERParameter, iDAsignacionCabeceraParameter, rECIDNOVEDADParameter, descNovedadParameter, mONTOParameter, fechaDesdeParameter, fechaHastaParameter, tipoNovedadParameter);
         }
     
         public virtual int sp_InsertUpdatePass(string pass, string cod, string rol)
@@ -556,6 +556,56 @@ namespace Minomina
                 new ObjectParameter("UsuarioSistema", typeof(bool));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_InsertColaboradores", rECIDPUESTOParameter, estatusLaboralParameter, nombresParameter, apellidosParameter, sexoParameter, cedulaPasaporteParameter, direccionParameter, emailParameter, telefonoParameter, cuentaBancariaParameter, tipoCuentaParameter, bancoParameter, fechaingresoParameter, usuarioSistemaParameter);
+        }
+    
+        public virtual int SP_UpdateAsigNovedadDetails(Nullable<int> rECID, Nullable<int> rECIDHEADER, string iDAsignacionCabecera, Nullable<int> rECIDNOVEDAD, string descNovedad, Nullable<double> mONTO, Nullable<System.DateTime> fechaDesde, Nullable<System.DateTime> fechaHasta, string tipoNovedad)
+        {
+            var rECIDParameter = rECID.HasValue ?
+                new ObjectParameter("RECID", rECID) :
+                new ObjectParameter("RECID", typeof(int));
+    
+            var rECIDHEADERParameter = rECIDHEADER.HasValue ?
+                new ObjectParameter("RECIDHEADER", rECIDHEADER) :
+                new ObjectParameter("RECIDHEADER", typeof(int));
+    
+            var iDAsignacionCabeceraParameter = iDAsignacionCabecera != null ?
+                new ObjectParameter("IDAsignacionCabecera", iDAsignacionCabecera) :
+                new ObjectParameter("IDAsignacionCabecera", typeof(string));
+    
+            var rECIDNOVEDADParameter = rECIDNOVEDAD.HasValue ?
+                new ObjectParameter("RECIDNOVEDAD", rECIDNOVEDAD) :
+                new ObjectParameter("RECIDNOVEDAD", typeof(int));
+    
+            var descNovedadParameter = descNovedad != null ?
+                new ObjectParameter("DescNovedad", descNovedad) :
+                new ObjectParameter("DescNovedad", typeof(string));
+    
+            var mONTOParameter = mONTO.HasValue ?
+                new ObjectParameter("MONTO", mONTO) :
+                new ObjectParameter("MONTO", typeof(double));
+    
+            var fechaDesdeParameter = fechaDesde.HasValue ?
+                new ObjectParameter("FechaDesde", fechaDesde) :
+                new ObjectParameter("FechaDesde", typeof(System.DateTime));
+    
+            var fechaHastaParameter = fechaHasta.HasValue ?
+                new ObjectParameter("FechaHasta", fechaHasta) :
+                new ObjectParameter("FechaHasta", typeof(System.DateTime));
+    
+            var tipoNovedadParameter = tipoNovedad != null ?
+                new ObjectParameter("TipoNovedad", tipoNovedad) :
+                new ObjectParameter("TipoNovedad", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_UpdateAsigNovedadDetails", rECIDParameter, rECIDHEADERParameter, iDAsignacionCabeceraParameter, rECIDNOVEDADParameter, descNovedadParameter, mONTOParameter, fechaDesdeParameter, fechaHastaParameter, tipoNovedadParameter);
+        }
+    
+        public virtual int sp_InsertDeducciones(Nullable<int> recidheader)
+        {
+            var recidheaderParameter = recidheader.HasValue ?
+                new ObjectParameter("recidheader", recidheader) :
+                new ObjectParameter("recidheader", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertDeducciones", recidheaderParameter);
         }
     }
 }
