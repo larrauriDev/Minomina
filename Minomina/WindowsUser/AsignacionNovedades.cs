@@ -219,5 +219,17 @@ namespace Minomina.WindowsUser
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PAsignacionNovedad nove = new PAsignacionNovedad(this);
+            nove.DeleteRow(dataGridNovedad.CurrentRow,dataGridNovedad,dataGridEmpleado);
+            dataGridNovedad.Rows.Remove(dataGridNovedad.CurrentRow);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

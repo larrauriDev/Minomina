@@ -83,6 +83,16 @@ namespace Minomina.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Aprobar {
+            get {
+                object obj = ResourceManager.GetObject("Aprobar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonSingin {
             get {
                 object obj = ResourceManager.GetObject("BotonSingin", resourceCulture);
@@ -116,6 +126,16 @@ namespace Minomina.Properties {
         internal static System.Drawing.Bitmap Caja02 {
             get {
                 object obj = ResourceManager.GetObject("Caja02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calculos_Nomina {
+            get {
+                object obj = ResourceManager.GetObject("Calculos Nomina", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -966,6 +986,16 @@ namespace Minomina.Properties {
         internal static System.Drawing.Bitmap Minimizar {
             get {
                 object obj = ResourceManager.GetObject("Minimizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap No_aprobado {
+            get {
+                object obj = ResourceManager.GetObject("No aprobado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

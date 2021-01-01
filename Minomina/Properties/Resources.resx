@@ -121,14 +121,14 @@
   <data name="IconoAgregarColaboradorColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoAgregarColaboradorColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconoAdminColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconoAdminColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lig" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconoCreapuestoRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoCreapuestoRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aprobar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aprobar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MenuCovercioDobleDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuCovercioDobleDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,17 +193,20 @@
   <data name="Ojonoven" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ojonoven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuproductoDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuproductoDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AgregarNovedadFuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AgregarNovedadFuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconoCrearMaterial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoCrearMaterial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AgregarNovedadDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarNovedadDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MenuMateriaDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuMateriaDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuMareriaNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuMareriaNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconoAgregaProductoBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoAgregaProductoBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,6 +235,9 @@
   <data name="IconoagregarColaboradorClaro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoagregarColaboradorClaro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RestoreDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RestoreDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconoCrearmedidaDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoCrearmedidaDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -243,9 +249,6 @@
   </data>
   <data name="DesvinculacionAfuera1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DesvinculacionAfuera2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ligcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ligcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoredondeLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoredondeLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,8 +283,14 @@
   <data name="MenuNovedadesAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuNovedadesAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Calculos Nomina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calculos Nomina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Caja01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Caja01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeaderColaborador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeaderColaborador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo03" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo03.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,8 +304,8 @@
   <data name="IconoIventarioColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoIventarioColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuMareriaNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuMareriaNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuproductoDobleAfuera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuproductoDobleAfuera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo QMproduc - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo QMproduc - Copy.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,8 +340,8 @@
   <data name="iconoAdminBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoAdminBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RestoreDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RestoreDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconoAdminColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoAdminColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HeaderNovedad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeaderNovedad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -373,8 +382,8 @@
   <data name="MenucovercioNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenucovercioNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeaderColaborador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HeaderColaborador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ligcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ligcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ojover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ojover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -397,7 +406,7 @@
   <data name="IconocreanoveDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconocreanoveDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AgregarNovedadDentro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarNovedadDentro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="No aprobado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\No aprobado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -18,7 +18,7 @@ namespace Minomina
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AsignacionNovedades());
+            Application.Run(new Nomina());
         }
     }
 }

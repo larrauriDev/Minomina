@@ -18,6 +18,7 @@ namespace Minomina
         public NominaCabecera()
         {
             this.NominaDetalles = new HashSet<NominaDetalle>();
+            this.NominaDetalles1 = new HashSet<NominaDetalle1>();
         }
     
         public int RECID { get; set; }
@@ -31,5 +32,7 @@ namespace Minomina
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NominaDetalle> NominaDetalles { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NominaDetalle1> NominaDetalles1 { get; set; }
     }
 }

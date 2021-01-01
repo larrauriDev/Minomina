@@ -12,7 +12,7 @@ namespace Minomina
     using System;
     using System.Collections.Generic;
     
-    public partial class NominaDetalle
+    public partial class NominaDetalle1
     {
         public int RECID { get; set; }
         public Nullable<int> RECIDCabecera { get; set; }

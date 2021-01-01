@@ -15,7 +15,7 @@ namespace Minomina.Models
         private int recidColaborador;
         private string nombreColaborar;
         private float? totalesHeader;
-        private int? recidTableDetails = 0;
+        private int recidTableDetails = 0;
         private int recidHeader;
         private string idAsignacion;
         private int recidNovedad;
@@ -30,7 +30,7 @@ namespace Minomina.Models
         public int RECIDCOLABORADOR { get=> recidColaborador; set => recidColaborador = value; }
         public string NOMBRECOLABORADOR { get => nombreColaborar; set => nombreColaborar = value; }
         public float? TOTALHEADER { get => totalesHeader; set => totalesHeader = value; }
-        public int? RECIDTABLEDETAILS { get => recidTableDetails; set => recidTableDetails = value; }
+        public int RECIDTABLEDETAILS { get => recidTableDetails; set => recidTableDetails = value; }
         public int RECIDHEADER { get => recidHeader; set => recidHeader = value; }
         public string IDASIGNACION { get => idAsignacion; set => idAsignacion = value; }
         public int RECIDNOVEDAD { get => recidNovedad; set => recidNovedad = value; }
@@ -106,9 +106,6 @@ namespace Minomina.Models
  
                 }
                 CalculoDeducciones(recid);
-
-
-
 
             }
             
@@ -199,6 +196,32 @@ namespace Minomina.Models
 
             }
               
+        }
+        public void DeleteRow()
+        {
+            using (MINOMINAEntities db = new MINOMINAEntities())
+            {
+
+                #region Varias forma de actulizar 
+
+
+
+                /*  AsigNovedadDetalle RowDelete = new AsigNovedadDetalle { RECID = recidTableDetails };
+                  if (RowDelete != null)
+                  {
+
+                      db.Entry(RowDelete).State = System.Data.Entity.EntityState.Deleted;
+                      db.SaveChanges();
+
+
+                  }*/
+                #endregion
+
+                db.Database.ExecuteSqlCommand("Delete  AsigNovedadDetalles where RECID={0} ", recidTableDetails);
+                db.Database.ExecuteSqlCommand("update AsigCabecera SET Total = dbo.TotalDetalle({0}) where RECID = {0} ", recidHeader);
+            }
+        
+        
         }
 
     }

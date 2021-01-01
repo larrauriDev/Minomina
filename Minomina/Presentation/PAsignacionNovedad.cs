@@ -87,5 +87,18 @@ namespace Minomina.Presentation
             mAsig.FillDagridDetails(dtg);
             
         }
+        public void DeleteRow(DataGridViewRow dgvr, DataGridView dgv, DataGridView dgv2)
+        {
+            if (dgvr.Cells[7].Value != null)
+            {
+                mAsig.RECIDTABLEDETAILS = int.Parse(dgvr.Cells[8].Value.ToString());
+                mAsig.RECIDHEADER = int.Parse(dgvr.Cells[7].Value.ToString());
+                mAsig.DeleteRow();
+                FillDataGridDetails(dgv);
+                mAsig.FillaDatagridHeader(dgv2);
+
+            }
+            
+        }
     }
 }

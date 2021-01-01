@@ -12,17 +12,14 @@ namespace Minomina
     using System;
     using System.Collections.Generic;
     
-    public partial class NominaDetalle
+    public partial class vNomina
     {
         public int RECID { get; set; }
-        public Nullable<int> RECIDCabecera { get; set; }
-        public Nullable<int> RECIDAsingCabecera { get; set; }
-        public string IDColaborador { get; set; }
-        public string Nombre { get; set; }
-        public Nullable<double> TotalDeducciones { get; set; }
-        public Nullable<double> TotalIngreso { get; set; }
-        public Nullable<double> TotalPagar { get; set; }
-    
-        public virtual NominaCabecera NominaCabecera { get; set; }
+        public string IDRegitro { get; set; }
+        public string Codigo_de_empleado { get; set; }
+        public string Colaborador { get; set; }
+        public Nullable<double> Deducciones { get; set; }
+        public Nullable<double> Ingreso { get; set; }
+        public Nullable<double> Total { get; set; }
     }
 }

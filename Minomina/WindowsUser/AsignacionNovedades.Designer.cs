@@ -36,6 +36,19 @@ namespace Minomina.WindowsUser
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridNovedad = new System.Windows.Forms.DataGridView();
+            this.dataGridEmpleado = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbListaColaborador = new System.Windows.Forms.ComboBox();
+            this.panelUp = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btGuardar = new System.Windows.Forms.Button();
+            this.btCancelar = new System.Windows.Forms.Button();
+            this.btBuscar = new System.Windows.Forms.Button();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btCopy = new System.Windows.Forms.Button();
             this.RegistroDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbGridNovedad = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Desc_Novedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,25 +58,12 @@ namespace Minomina.WindowsUser
             this.TipoNovedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECIDAsigHeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Recid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridEmpleado = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbListaColaborador = new System.Windows.Forms.ComboBox();
-            this.panelUp = new System.Windows.Forms.Panel();
+            this.btAgregarNovedad = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btCierre = new System.Windows.Forms.Button();
             this.btRestaurar = new System.Windows.Forms.Button();
             this.btMinimizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btAgregarNovedad = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btGuardar = new System.Windows.Forms.Button();
-            this.btCancelar = new System.Windows.Forms.Button();
-            this.btBuscar = new System.Windows.Forms.Button();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btCopy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNovedad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleado)).BeginInit();
             this.panelUp.SuspendLayout();
@@ -125,68 +125,6 @@ namespace Minomina.WindowsUser
             this.dataGridNovedad.TabIndex = 88;
             this.dataGridNovedad.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridNovedad_CellClick);
             this.dataGridNovedad.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridNovedad_CellValueChanged);
-            // 
-            // RegistroDetalle
-            // 
-            this.RegistroDetalle.HeaderText = "Registro";
-            this.RegistroDetalle.MinimumWidth = 6;
-            this.RegistroDetalle.Name = "RegistroDetalle";
-            // 
-            // cbGridNovedad
-            // 
-            this.cbGridNovedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cbGridNovedad.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.cbGridNovedad.HeaderText = "Codigo Novedad";
-            this.cbGridNovedad.MinimumWidth = 6;
-            this.cbGridNovedad.Name = "cbGridNovedad";
-            this.cbGridNovedad.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cbGridNovedad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Desc_Novedad
-            // 
-            this.Desc_Novedad.HeaderText = "Descripcion Novedad";
-            this.Desc_Novedad.MinimumWidth = 6;
-            this.Desc_Novedad.Name = "Desc_Novedad";
-            // 
-            // monto
-            // 
-            this.monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.monto.HeaderText = "Monto";
-            this.monto.MinimumWidth = 6;
-            this.monto.Name = "monto";
-            // 
-            // Desde
-            // 
-            this.Desde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Desde.HeaderText = "Desde";
-            this.Desde.MinimumWidth = 6;
-            this.Desde.Name = "Desde";
-            // 
-            // hasta
-            // 
-            this.hasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hasta.HeaderText = "Hasta";
-            this.hasta.MinimumWidth = 6;
-            this.hasta.Name = "hasta";
-            // 
-            // TipoNovedad
-            // 
-            this.TipoNovedad.HeaderText = "Tipo De Novedad";
-            this.TipoNovedad.MinimumWidth = 6;
-            this.TipoNovedad.Name = "TipoNovedad";
-            // 
-            // RECIDAsigHeader
-            // 
-            this.RECIDAsigHeader.HeaderText = "Recid Header";
-            this.RECIDAsigHeader.MinimumWidth = 6;
-            this.RECIDAsigHeader.Name = "RECIDAsigHeader";
-            // 
-            // Recid
-            // 
-            this.Recid.HeaderText = "Recid";
-            this.Recid.MinimumWidth = 6;
-            this.Recid.Name = "Recid";
-            this.Recid.Visible = false;
             // 
             // dataGridEmpleado
             // 
@@ -274,65 +212,6 @@ namespace Minomina.WindowsUser
             this.panelUp.TabIndex = 97;
             this.panelUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUp_MouseDown);
             // 
-            // btCierre
-            // 
-            this.btCierre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btCierre.BackgroundImage = global::Minomina.Properties.Resources.Cierre;
-            this.btCierre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btCierre.FlatAppearance.BorderSize = 0;
-            this.btCierre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCierre.Location = new System.Drawing.Point(958, 7);
-            this.btCierre.Margin = new System.Windows.Forms.Padding(0);
-            this.btCierre.Name = "btCierre";
-            this.btCierre.Size = new System.Drawing.Size(35, 33);
-            this.btCierre.TabIndex = 0;
-            this.btCierre.UseVisualStyleBackColor = true;
-            this.btCierre.Click += new System.EventHandler(this.btCierre_Click);
-            // 
-            // btRestaurar
-            // 
-            this.btRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btRestaurar.BackgroundImage = global::Minomina.Properties.Resources.RestoreDown;
-            this.btRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btRestaurar.FlatAppearance.BorderSize = 0;
-            this.btRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRestaurar.Location = new System.Drawing.Point(924, 7);
-            this.btRestaurar.Margin = new System.Windows.Forms.Padding(0);
-            this.btRestaurar.Name = "btRestaurar";
-            this.btRestaurar.Size = new System.Drawing.Size(35, 33);
-            this.btRestaurar.TabIndex = 1;
-            this.btRestaurar.UseVisualStyleBackColor = true;
-            this.btRestaurar.Click += new System.EventHandler(this.btRestaurar_Click);
-            // 
-            // btMinimizar
-            // 
-            this.btMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btMinimizar.BackgroundImage = global::Minomina.Properties.Resources.Minimizar;
-            this.btMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btMinimizar.FlatAppearance.BorderSize = 0;
-            this.btMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimizar.Location = new System.Drawing.Point(886, 12);
-            this.btMinimizar.Name = "btMinimizar";
-            this.btMinimizar.Size = new System.Drawing.Size(35, 28);
-            this.btMinimizar.TabIndex = 3;
-            this.btMinimizar.UseVisualStyleBackColor = true;
-            this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImage = global::Minomina.Properties.Resources.Mini;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(923, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 33);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -345,36 +224,6 @@ namespace Minomina.WindowsUser
             this.label13.TabIndex = 104;
             this.label13.Text = "Agregar Novedad";
             // 
-            // btAgregarNovedad
-            // 
-            this.btAgregarNovedad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btAgregarNovedad.BackColor = System.Drawing.Color.Transparent;
-            this.btAgregarNovedad.BackgroundImage = global::Minomina.Properties.Resources.AgregarNovedadFuera;
-            this.btAgregarNovedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAgregarNovedad.FlatAppearance.BorderSize = 0;
-            this.btAgregarNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarNovedad.Location = new System.Drawing.Point(27, 372);
-            this.btAgregarNovedad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btAgregarNovedad.Name = "btAgregarNovedad";
-            this.btAgregarNovedad.Size = new System.Drawing.Size(56, 49);
-            this.btAgregarNovedad.TabIndex = 105;
-            this.btAgregarNovedad.UseVisualStyleBackColor = false;
-            this.btAgregarNovedad.Click += new System.EventHandler(this.btAgregarNovedad_Click);
-            this.btAgregarNovedad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseDown);
-            this.btAgregarNovedad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::Minomina.Properties.Resources.HeaderAsignacionNovedad;
-            this.pictureBox1.Location = new System.Drawing.Point(272, 52);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(405, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 103;
-            this.pictureBox1.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -386,6 +235,7 @@ namespace Minomina.WindowsUser
             this.button2.TabIndex = 109;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btGuardar
             // 
@@ -445,6 +295,7 @@ namespace Minomina.WindowsUser
             this.label7.Size = new System.Drawing.Size(64, 17);
             this.label7.TabIndex = 111;
             this.label7.Text = "Nombre";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button3
             // 
@@ -471,6 +322,158 @@ namespace Minomina.WindowsUser
             this.btCopy.Text = "Copiar";
             this.btCopy.UseVisualStyleBackColor = true;
             this.btCopy.Click += new System.EventHandler(this.btCopy_Click);
+            // 
+            // RegistroDetalle
+            // 
+            this.RegistroDetalle.HeaderText = "Registro";
+            this.RegistroDetalle.MinimumWidth = 6;
+            this.RegistroDetalle.Name = "RegistroDetalle";
+            // 
+            // cbGridNovedad
+            // 
+            this.cbGridNovedad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbGridNovedad.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.cbGridNovedad.HeaderText = "Codigo Novedad";
+            this.cbGridNovedad.MinimumWidth = 6;
+            this.cbGridNovedad.Name = "cbGridNovedad";
+            this.cbGridNovedad.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cbGridNovedad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Desc_Novedad
+            // 
+            this.Desc_Novedad.HeaderText = "Descripcion Novedad";
+            this.Desc_Novedad.MinimumWidth = 6;
+            this.Desc_Novedad.Name = "Desc_Novedad";
+            // 
+            // monto
+            // 
+            this.monto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.monto.HeaderText = "Monto";
+            this.monto.MinimumWidth = 6;
+            this.monto.Name = "monto";
+            // 
+            // Desde
+            // 
+            this.Desde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Desde.HeaderText = "Desde";
+            this.Desde.MinimumWidth = 6;
+            this.Desde.Name = "Desde";
+            // 
+            // hasta
+            // 
+            this.hasta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hasta.HeaderText = "Hasta";
+            this.hasta.MinimumWidth = 6;
+            this.hasta.Name = "hasta";
+            // 
+            // TipoNovedad
+            // 
+            this.TipoNovedad.HeaderText = "Tipo De Novedad";
+            this.TipoNovedad.MinimumWidth = 6;
+            this.TipoNovedad.Name = "TipoNovedad";
+            // 
+            // RECIDAsigHeader
+            // 
+            this.RECIDAsigHeader.HeaderText = "Recid Header";
+            this.RECIDAsigHeader.MinimumWidth = 6;
+            this.RECIDAsigHeader.Name = "RECIDAsigHeader";
+            this.RECIDAsigHeader.Visible = false;
+            // 
+            // Recid
+            // 
+            this.Recid.HeaderText = "Recid";
+            this.Recid.MinimumWidth = 6;
+            this.Recid.Name = "Recid";
+            this.Recid.Visible = false;
+            // 
+            // btAgregarNovedad
+            // 
+            this.btAgregarNovedad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btAgregarNovedad.BackColor = System.Drawing.Color.Transparent;
+            this.btAgregarNovedad.BackgroundImage = global::Minomina.Properties.Resources.AgregarNovedadFuera;
+            this.btAgregarNovedad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAgregarNovedad.FlatAppearance.BorderSize = 0;
+            this.btAgregarNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAgregarNovedad.Location = new System.Drawing.Point(27, 372);
+            this.btAgregarNovedad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btAgregarNovedad.Name = "btAgregarNovedad";
+            this.btAgregarNovedad.Size = new System.Drawing.Size(56, 49);
+            this.btAgregarNovedad.TabIndex = 105;
+            this.btAgregarNovedad.UseVisualStyleBackColor = false;
+            this.btAgregarNovedad.Click += new System.EventHandler(this.btAgregarNovedad_Click);
+            this.btAgregarNovedad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseDown);
+            this.btAgregarNovedad.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btAgregarNovedad_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::Minomina.Properties.Resources.HeaderAsignacionNovedad;
+            this.pictureBox1.Location = new System.Drawing.Point(272, 52);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(405, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 103;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btCierre
+            // 
+            this.btCierre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btCierre.BackgroundImage = global::Minomina.Properties.Resources.Cierre;
+            this.btCierre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btCierre.FlatAppearance.BorderSize = 0;
+            this.btCierre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCierre.Location = new System.Drawing.Point(958, 7);
+            this.btCierre.Margin = new System.Windows.Forms.Padding(0);
+            this.btCierre.Name = "btCierre";
+            this.btCierre.Size = new System.Drawing.Size(35, 33);
+            this.btCierre.TabIndex = 0;
+            this.btCierre.UseVisualStyleBackColor = true;
+            this.btCierre.Click += new System.EventHandler(this.btCierre_Click);
+            // 
+            // btRestaurar
+            // 
+            this.btRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btRestaurar.BackgroundImage = global::Minomina.Properties.Resources.RestoreDown;
+            this.btRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btRestaurar.FlatAppearance.BorderSize = 0;
+            this.btRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRestaurar.Location = new System.Drawing.Point(924, 7);
+            this.btRestaurar.Margin = new System.Windows.Forms.Padding(0);
+            this.btRestaurar.Name = "btRestaurar";
+            this.btRestaurar.Size = new System.Drawing.Size(35, 33);
+            this.btRestaurar.TabIndex = 1;
+            this.btRestaurar.UseVisualStyleBackColor = true;
+            this.btRestaurar.Click += new System.EventHandler(this.btRestaurar_Click);
+            // 
+            // btMinimizar
+            // 
+            this.btMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btMinimizar.BackgroundImage = global::Minomina.Properties.Resources.Minimizar;
+            this.btMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btMinimizar.FlatAppearance.BorderSize = 0;
+            this.btMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMinimizar.Location = new System.Drawing.Point(886, 12);
+            this.btMinimizar.Name = "btMinimizar";
+            this.btMinimizar.Size = new System.Drawing.Size(35, 28);
+            this.btMinimizar.TabIndex = 3;
+            this.btMinimizar.UseVisualStyleBackColor = true;
+            this.btMinimizar.Click += new System.EventHandler(this.btMinimizar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = global::Minomina.Properties.Resources.Mini;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(923, 7);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 33);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AsignacionNovedades
             // 
@@ -526,6 +529,7 @@ namespace Minomina.WindowsUser
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btCopy;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistroDetalle;
         private System.Windows.Forms.DataGridViewComboBoxColumn cbGridNovedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc_Novedad;
@@ -535,6 +539,5 @@ namespace Minomina.WindowsUser
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoNovedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn RECIDAsigHeader;
         private System.Windows.Forms.DataGridViewTextBoxColumn Recid;
-        private System.Windows.Forms.Button btCopy;
     }
 }

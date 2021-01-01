@@ -94,8 +94,6 @@ warning 6013: The table/view 'MINOMINA.dbo.EscalaSalarial' does not have a prima
           <Property Name="TotalDeducciones" Type="float" />
           <Property Name="TotalIngreso" Type="float" />
           <Property Name="TotalPagar" Type="float" />
-          <Property Name="FechaDesde" Type="date" />
-          <Property Name="FechaHasta" Type="date" />
         </EntityType>
         <EntityType Name="Novedades">
           <Key>
@@ -172,6 +170,20 @@ warning 6002: The table/view 'MINOMINA.dbo.DataGridPuesto' does not have a prima
           <Property Name="Deberes" Type="varchar" MaxLength="500" />
           <Property Name="Pago por horas" Type="float" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MINOMINA.dbo.vNomina' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vNomina">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="RECID" Type="int" Nullable="false" />
+          <Property Name="IDRegitro" Type="varchar" MaxLength="8" />
+          <Property Name="Codigo de empleado" Type="varchar" MaxLength="9" />
+          <Property Name="Colaborador" Type="varchar" MaxLength="30" />
+          <Property Name="Deducciones" Type="float" />
+          <Property Name="Ingreso" Type="float" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
         <Association Name="FK__AsigCabec__RECID__4F7CD00D">
           <End Role="Colaboradores" Type="Self.Colaboradores" Multiplicity="0..1" />
           <End Role="AsigCabecera" Type="Self.AsigCabecera" Multiplicity="*" />
@@ -232,9 +244,6 @@ warning 6002: The table/view 'MINOMINA.dbo.DataGridPuesto' does not have a prima
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="FK__NominaDet__RECID__5BE2A6F2" />-->
         <Association Name="FK_Puestos_Departamentos">
           <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
           <End Role="Puestos" Type="Self.Puestos" Multiplicity="*" />
@@ -454,6 +463,17 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
     [DataGridPuesto].[Pago por horas] AS [Pago por horas]
     FROM [dbo].[DataGridPuesto] AS [DataGridPuesto]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="vNomina" EntityType="Self.vNomina" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vNomina].[RECID] AS [RECID], 
+    [vNomina].[IDRegitro] AS [IDRegitro], 
+    [vNomina].[Codigo de empleado] AS [Codigo de empleado], 
+    [vNomina].[Colaborador] AS [Colaborador], 
+    [vNomina].[Deducciones] AS [Deducciones], 
+    [vNomina].[Ingreso] AS [Ingreso], 
+    [vNomina].[Total] AS [Total]
+    FROM [dbo].[vNomina] AS [vNomina]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__AsigCabec__RECID__4F7CD00D" Association="Self.FK__AsigCabec__RECID__4F7CD00D">
             <End Role="Colaboradores" EntitySet="Colaboradores" />
             <End Role="AsigCabecera" EntitySet="AsigCabecera" />
@@ -558,6 +578,7 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Name="APROBADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="GENERADA" Type="Boolean" />
           <NavigationProperty Name="NominaDetalles" Relationship="Self.FK__NominaDet__RECID__5AEE82B9" FromRole="NominaCabecera" ToRole="NominaDetalle" />
+          <NavigationProperty Name="NominaDetalles1" Relationship="MINOMINAModel.FK__NominaDet__RECID__5AEE82B91" FromRole="NominaCabecera" ToRole="NominaDetalle1" />
         </EntityType>
         <EntityType Name="NominaDetalle">
           <Key>
@@ -571,8 +592,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <Property Name="TotalDeducciones" Type="Double" />
           <Property Name="TotalIngreso" Type="Double" />
           <Property Name="TotalPagar" Type="Double" />
-          <Property Name="FechaDesde" Type="DateTime" Precision="0" />
-          <Property Name="FechaHasta" Type="DateTime" Precision="0" />
           <NavigationProperty Name="NominaCabecera" Relationship="Self.FK__NominaDet__RECID__5AEE82B9" FromRole="NominaDetalle" ToRole="NominaCabecera" />
         </EntityType>
         <EntityType Name="Novedade">
@@ -884,6 +903,12 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           <FunctionImport Name="sp_InsertDeducciones">
           <Parameter Name="recidheader" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="NominaDetalle" EntityType="MINOMINAModel.NominaDetalle1" />
+          <AssociationSet Name="FK__NominaDet__RECID__5AEE82B91" Association="MINOMINAModel.FK__NominaDet__RECID__5AEE82B91">
+            <End Role="NominaCabecera" EntitySet="NominaCabeceras" />
+            <End Role="NominaDetalle1" EntitySet="NominaDetalle" />
+          </AssociationSet>
+          <EntitySet Name="vNominas" EntityType="MINOMINAModel.vNomina" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -929,6 +954,44 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="NominaDetalle1">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="RECID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RECIDCabecera" Type="Int32" />
+          <Property Name="RECIDAsingCabecera" Type="Int32" />
+          <Property Name="IDColaborador" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TotalDeducciones" Type="Double" />
+          <Property Name="TotalIngreso" Type="Double" />
+          <Property Name="TotalPagar" Type="Double" />
+          <NavigationProperty Name="NominaCabecera" Relationship="MINOMINAModel.FK__NominaDet__RECID__5AEE82B91" FromRole="NominaDetalle1" ToRole="NominaCabecera" />
+        </EntityType>
+        <Association Name="FK__NominaDet__RECID__5AEE82B91">
+          <End Type="MINOMINAModel.NominaCabecera" Role="NominaCabecera" Multiplicity="0..1" />
+          <End Type="MINOMINAModel.NominaDetalle1" Role="NominaDetalle1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NominaCabecera">
+              <PropertyRef Name="RECID" />
+            </Principal>
+            <Dependent Role="NominaDetalle1">
+              <PropertyRef Name="RECIDCabecera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="vNomina">
+          <Key>
+            <PropertyRef Name="RECID" />
+          </Key>
+          <Property Name="RECID" Type="Int32" Nullable="false" />
+          <Property Name="IDRegitro" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo_de_empleado" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Colaborador" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Deducciones" Type="Double" />
+          <Property Name="Ingreso" Type="Double" />
+          <Property Name="Total" Type="Double" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1005,22 +1068,6 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
                 <ScalarProperty Name="APROBADOCION" ColumnName="APROBADOCION" />
                 <ScalarProperty Name="APROBADO" ColumnName="APROBADO" />
                 <ScalarProperty Name="GENERADA" ColumnName="GENERADA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="NominaDetalles">
-            <EntityTypeMapping TypeName="MINOMINAModel.NominaDetalle">
-              <MappingFragment StoreEntitySet="NominaDetalle">
-                <ScalarProperty Name="RECID" ColumnName="RECID" />
-                <ScalarProperty Name="RECIDCabecera" ColumnName="RECIDCabecera" />
-                <ScalarProperty Name="RECIDAsingCabecera" ColumnName="RECIDAsingCabecera" />
-                <ScalarProperty Name="IDColaborador" ColumnName="IDColaborador" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="TotalDeducciones" ColumnName="TotalDeducciones" />
-                <ScalarProperty Name="TotalIngreso" ColumnName="TotalIngreso" />
-                <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
-                <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
-                <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1140,6 +1187,33 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="SP_UpdateAsigNovedadDetails" FunctionName="MINOMINAModel.Store.SP_UpdateAsigNovedadDetails" />
           <FunctionImportMapping FunctionImportName="sp_InsertDeducciones" FunctionName="MINOMINAModel.Store.sp_InsertDeducciones" />
+          <EntitySetMapping Name="NominaDetalle">
+            <EntityTypeMapping TypeName="MINOMINAModel.NominaDetalle1">
+              <MappingFragment StoreEntitySet="NominaDetalle">
+                <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+                <ScalarProperty Name="TotalIngreso" ColumnName="TotalIngreso" />
+                <ScalarProperty Name="TotalDeducciones" ColumnName="TotalDeducciones" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IDColaborador" ColumnName="IDColaborador" />
+                <ScalarProperty Name="RECIDAsingCabecera" ColumnName="RECIDAsingCabecera" />
+                <ScalarProperty Name="RECIDCabecera" ColumnName="RECIDCabecera" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vNominas">
+            <EntityTypeMapping TypeName="MINOMINAModel.vNomina">
+              <MappingFragment StoreEntitySet="vNomina">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Ingreso" ColumnName="Ingreso" />
+                <ScalarProperty Name="Deducciones" ColumnName="Deducciones" />
+                <ScalarProperty Name="Colaborador" ColumnName="Colaborador" />
+                <ScalarProperty Name="Codigo_de_empleado" ColumnName="Codigo de empleado" />
+                <ScalarProperty Name="IDRegitro" ColumnName="IDRegitro" />
+                <ScalarProperty Name="RECID" ColumnName="RECID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1154,8 +1228,8 @@ warning 6035: The relationship 'FK__NominaDet__RECID__5BE2A6F2' has columns that
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

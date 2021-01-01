@@ -108,6 +108,7 @@
     </Compile>
     <Compile Include="Helpers\HelperForms.cs" />
     <Compile Include="IViews\IAsignacionesNovedad.cs" />
+    <Compile Include="IViews\INomina.cs" />
     <Compile Include="IViews\INovedades.cs" />
     <Compile Include="IViews\IPuesto.cs" />
     <Compile Include="MainScreen\GestionHumana1.cs">
@@ -130,6 +131,7 @@
     </Compile>
     <Compile Include="Models\MAsignacionNovedad.cs" />
     <Compile Include="Models\MColaborador.cs" />
+    <Compile Include="Models\MNomina.cs" />
     <Compile Include="Models\MNovedades.cs" />
     <Compile Include="Models\MPuesto.cs" />
     <Compile Include="NominaCabecera.cs">
@@ -138,11 +140,15 @@
     <Compile Include="NominaDetalle.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
+    <Compile Include="NominaDetalle1.cs">
+      <DependentUpon>DBMINOMINA.tt</DependentUpon>
+    </Compile>
     <Compile Include="Novedade.cs">
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PAsignacionNovedad.cs" />
     <Compile Include="Presentation\PColaborador.cs" />
+    <Compile Include="Presentation\PNomina.cs" />
     <Compile Include="Presentation\PNovedades.cs" />
     <Compile Include="Presentation\PPuesto.cs" />
     <Compile Include="Program.cs" />
@@ -160,6 +166,9 @@
       <DependentUpon>DBMINOMINA.tt</DependentUpon>
     </Compile>
     <Compile Include="IViews\IColaboradores.cs" />
+    <Compile Include="vNomina.cs">
+      <DependentUpon>DBMINOMINA.tt</DependentUpon>
+    </Compile>
     <Compile Include="WindowsUser\AsignacionNovedades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +180,12 @@
     </Compile>
     <Compile Include="WindowsUser\Colaboradores.Designer.cs">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsUser\Nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsUser\Nomina.Designer.cs">
+      <DependentUpon>Nomina.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsUser\Novedades.cs">
       <SubType>Form</SubType>
@@ -208,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsUser\Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsUser\Nomina.resx">
+      <DependentUpon>Nomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowsUser\Novedades.resx">
       <DependentUpon>Novedades.cs</DependentUpon>
@@ -545,6 +563,9 @@
       <DependentUpon>DBMINOMINA.edmx</DependentUpon>
       <LastGenOutput>DBMINOMINA.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\No aprobado.png" />
+    <None Include="Resources\Aprobar.png" />
+    <None Include="Resources\Calculos Nomina.png" />
     <None Include="Resources\AgregarNovedadDentro.png" />
     <None Include="Resources\AgregarNovedadFuera.png" />
     <None Include="Resources\HeaderAsignacionNovedad.png" />
